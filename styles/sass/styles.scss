@@ -1,1 +1,8 @@
+@import './partials/setup';
+@import './partials/variables';
+@import './partials/typography';
 @import './partials/baseStyles';
+
+// Sections
+@import './partials/sections/header';
+@import './partials/sections/navstyles';

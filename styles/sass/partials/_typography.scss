@@ -1,0 +1,28 @@
+h1 {
+    font-size: 4rem;
+    line-height: 92px;
+    letter-spacing: 1px;
+}
+
+p {
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.button {
+    background-color: $accent;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    line-height: 32px;
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+}
+
+h1,
+p,
+.button {
+    text-transform: uppercase;
+    color: $white;
+}
