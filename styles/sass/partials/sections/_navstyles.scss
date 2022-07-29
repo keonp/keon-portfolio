@@ -1,0 +1,30 @@
+.navBar {
+    background-color: $accent;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: flex;
+        width: 500px;
+        justify-content: space-between;
+    }
+    
+    .logo,
+    li a {
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.25s;
+
+        &:hover,
+        &:focus {
+            color: $black;
+        }
+    }
+}

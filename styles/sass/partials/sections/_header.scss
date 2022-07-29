@@ -21,7 +21,7 @@
         justify-content: space-between;
 
         .button {
-            transition: 0.35s;
+            transition: 0.25s;
         }
 
         .contactMe {
@@ -37,7 +37,7 @@
     }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 645px) {
     .header {
 
         h1 {
@@ -46,7 +46,7 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 460px) {
     .header {
         .buttonsContainer {
             flex-direction: column;

@@ -327,8 +327,8 @@ a {
           justify-content: space-between;
 }
 .header .buttonsContainer .button {
-  -webkit-transition: 0.35s;
-  transition: 0.35s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 .header .buttonsContainer .contactMe {
   color: #161616;
@@ -339,12 +339,12 @@ a {
   background-color: #F24259;
 }
 
-@media (max-width: 625px) {
+@media (max-width: 645px) {
   .header h1 {
     font-size: 11.5vw;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .header .buttonsContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -358,4 +358,44 @@ a {
     margin: 5px 0;
     width: 200px;
   }
+}
+.navBar {
+  background-color: #F24259;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navBar .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navBar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navBar .logo,
+.navBar li a {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.navBar .logo:hover, .navBar .logo:focus,
+.navBar li a:hover,
+.navBar li a:focus {
+  color: #161616;
 }
