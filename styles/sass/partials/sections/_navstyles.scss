@@ -2,12 +2,10 @@
     background-color: $accent;
     height: 55px;
 
-    transition: 0.25s;
-
     display: flex;
     align-items: center;
     
-    .wrapper {
+    .navBarContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -36,11 +34,6 @@
         font-weight: bold;
     }
 
-    .hamburgerMenu,
-    .mobileNav {
-        display: none;
-    }
-
     .menuBar {
         width: 40px;
         height: 3.5px;
@@ -49,14 +42,41 @@
         margin: 4px auto;
         border-radius: 30px;
     }
+
+    .navBarContainer {
+    transition: 0.35s;
+    }
+
+    .mobileMenu {
+        li {
+            padding: 20px 0;
+        }
+    }
 }
 
-.extend {
-    height: 500px;
+.hamburgerMenu,
+.mobileNav {
+    display: none;
+}
+
+.extendMenuDrop {
+    height: auto;
+}
+
+.extendMenuDisplay {
+    padding-top: 15px;
+    display: block;
+}
+
+.extendMenuBorder {
+    border-bottom: 1.5px solid $white;
+    padding-bottom: 12px;
 }
 
 @media (max-width: 645px) {
-    .navBar {
+    .navBar {  
+        align-items: flex-start;
+        padding: 10.5px 0;
 
         .mainMenu {
             display: none;
