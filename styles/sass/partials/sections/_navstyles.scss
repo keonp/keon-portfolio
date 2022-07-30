@@ -1,15 +1,19 @@
 .navBar {
     background-color: $accent;
-    height: 45px;
+    height: 55px;
+
+    transition: 0.25s;
+
     display: flex;
     align-items: center;
     
     .wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
-    .menu {
+    .mainMenu {
         display: flex;
         width: 500px;
         justify-content: space-between;
@@ -25,6 +29,43 @@
         &:hover,
         &:focus {
             color: $black;
+        }
+    }
+
+    .logo {
+        font-weight: bold;
+    }
+
+    .hamburgerMenu,
+    .mobileNav {
+        display: none;
+    }
+
+    .menuBar {
+        width: 40px;
+        height: 3.5px;
+        display: block;
+        background-color: $white;
+        margin: 4px auto;
+        border-radius: 30px;
+    }
+}
+
+.extend {
+    height: 500px;
+}
+
+@media (max-width: 645px) {
+    .navBar {
+
+        .mainMenu {
+            display: none;
+        }
+
+        .hamburgerMenu {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
         }
     }
 }
