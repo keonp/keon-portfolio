@@ -1,0 +1,24 @@
+.about {
+    // padding: 50px 0 0 0;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profileImgContainer {
+        width: 40%;
+    }
+    
+    .profileBioContainer {
+        width: 60%;
+    }
+
+    .profileImg {
+        width: 360px;
+        height: 480px;
+        img {
+            height: 100%;
+        }
+    }
+}

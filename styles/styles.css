@@ -232,10 +232,17 @@ h1 {
   letter-spacing: 1px;
 }
 
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
 p {
   line-height: 32px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .button {
@@ -249,7 +256,6 @@ p {
 }
 
 h1,
-p,
 .button {
   text-transform: uppercase;
   color: #FFFFFF;
@@ -292,6 +298,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+section {
+  padding: 50px 0;
 }
 
 .header {
@@ -341,6 +351,9 @@ a {
   color: #FFFFFF;
   background-color: #F24259;
 }
+.header p {
+  color: #FFFFFF;
+}
 
 @media (max-width: 645px) {
   .header h1 {
@@ -371,6 +384,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: sticky;
+  top: 0;
 }
 .navBar .navBarContainer {
   display: -webkit-box;
@@ -421,7 +436,7 @@ a {
   transition: 0.35s;
 }
 .navBar .mobileMenu li {
-  padding: 20px 0;
+  padding: 20px 0 20px 5%;
 }
 
 .hamburgerMenu,
@@ -436,6 +451,10 @@ a {
 .extendMenuDisplay {
   padding-top: 15px;
   display: block;
+  background-color: #F24259;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 
 .extendMenuBorder {
@@ -463,4 +482,43 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about .profileImgContainer {
+  width: 40%;
+}
+.about .profileBioContainer {
+  width: 60%;
+}
+.about .profileImg {
+  width: 360px;
+  height: 480px;
+}
+.about .profileImg img {
+  height: 100%;
+}
+
+.skills {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.skills .skillsIconGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.skills .skillsIconGallery div {
+  width: 20%;
+}
+.skills .skillsIconGallery div > * {
+  font-size: 80px;
 }

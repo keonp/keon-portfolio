@@ -1,0 +1,16 @@
+.skills {
+    // padding: 50px 0 0 0;
+    background-color: $offWhite;
+    text-align: center;
+
+    .skillsIconGallery {
+        display: flex;
+        flex-wrap: wrap;
+        div {
+            width: 20%;
+            > * {
+                font-size: 80px;
+            }
+        }
+    }
+}

@@ -4,6 +4,9 @@
 
     display: flex;
     align-items: center;
+
+    position: sticky;
+    top: 0;
     
     .navBarContainer {
         display: flex;
@@ -49,7 +52,7 @@
 
     .mobileMenu {
         li {
-            padding: 20px 0;
+            padding: 20px 0 20px 5%;
         }
     }
 }
@@ -66,6 +69,10 @@
 .extendMenuDisplay {
     padding-top: 15px;
     display: block;
+    background-color: $accent;
+    position: absolute;
+    width: 100%;
+    left: 0;
 }
 
 .extendMenuBorder {

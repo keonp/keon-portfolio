@@ -4,10 +4,17 @@ h1 {
     letter-spacing: 1px;
 }
 
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
 p {
     line-height: 32px;
     font-weight: bold;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .button {
@@ -21,7 +28,6 @@ p {
 }
 
 h1,
-p,
 .button {
     text-transform: uppercase;
     color: $white;
