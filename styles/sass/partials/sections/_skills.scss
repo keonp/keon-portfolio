@@ -3,14 +3,27 @@
     background-color: $offWhite;
     text-align: center;
 
+    h2 {
+        display: inline-block;
+    }
+
     .skillsIconGallery {
         display: flex;
         flex-wrap: wrap;
-        div {
-            width: 20%;
-            > * {
-                font-size: 80px;
-            }
+    }
+
+    .devIconContainer {
+        width: calc(20% - 40px);
+        margin: 40px 20px;
+        color: $accent;
+        transition: 0.3s;
+        > * {
+            font-size: 80px;
+        }
+
+        &:hover {
+            color: gold;
+            transform: translateY(-10px);
         }
     }
 }

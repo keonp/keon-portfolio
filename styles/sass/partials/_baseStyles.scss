@@ -40,3 +40,31 @@ a {
 section {
     padding: 50px 0;
 }
+
+.underline {
+    height: 2.5px;
+    width: 110px;
+    background-color: $accent;
+    position: relative;
+    margin: 10px auto 0;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $accent;
+        position: absolute;
+        top: -140%;
+    }
+
+    &::before {
+        left: -5%;
+
+    }
+
+    &::after {
+        right: -5%;
+    }
+}

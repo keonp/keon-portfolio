@@ -304,6 +304,29 @@ section {
   padding: 50px 0;
 }
 
+.underline {
+  height: 2.5px;
+  width: 110px;
+  background-color: #F24259;
+  position: relative;
+  margin: 10px auto 0;
+}
+.underline::before, .underline::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #F24259;
+  position: absolute;
+  top: -140%;
+}
+.underline::before {
+  left: -5%;
+}
+.underline::after {
+  right: -5%;
+}
+
 .header {
   height: 100vh;
   background-image: url(../assets/header-background.jpg);
@@ -407,17 +430,14 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.navBar .logo,
-.navBar li a {
+.navBar a {
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 1px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-.navBar .logo:hover, .navBar .logo:focus,
-.navBar li a:hover,
-.navBar li a:focus {
+.navBar a:hover, .navBar a:focus {
   color: #161616;
 }
 .navBar .logo {
@@ -509,6 +529,9 @@ section {
   background-color: #f2f2f2;
   text-align: center;
 }
+.skills h2 {
+  display: inline-block;
+}
 .skills .skillsIconGallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -516,9 +539,18 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.skills .skillsIconGallery div {
-  width: 20%;
+.skills .devIconContainer {
+  width: calc(20% - 40px);
+  margin: 40px 20px;
+  color: #F24259;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-.skills .skillsIconGallery div > * {
+.skills .devIconContainer > * {
   font-size: 80px;
+}
+.skills .devIconContainer:hover {
+  color: gold;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
