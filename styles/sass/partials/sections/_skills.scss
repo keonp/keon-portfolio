@@ -1,15 +1,7 @@
-@mixin iconWidth($columns) {
-    width: calc((100% / $columns) - 40px);
-}
-
 .skills {
     // padding: 50px 0 0 0;
     background-color: $offWhite;
     text-align: center;
-
-    h2 {
-        display: inline-block;
-    }
 
     .skillsIconGallery {
         display: flex;
@@ -18,7 +10,7 @@
     }
 
     .devIconContainer {
-        @include iconWidth(5);
+        @include containerWidth(5, 40px);
         margin: 40px 20px;
         color: $accent;
         transition: 0.3s;
@@ -36,7 +28,7 @@
 @media (max-width: 645px) {
     .skills {
         .devIconContainer  {
-            @include iconWidth(3);
+            @include containerWidth(3, 40px);
         }
     }
 }
@@ -44,7 +36,7 @@
 @media (max-width: 460px) {
     .skills {
         .devIconContainer  {
-            @include iconWidth(2);
+            @include containerWidth(2, 40px);
         }
     }
 }

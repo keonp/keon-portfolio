@@ -529,9 +529,6 @@ section {
   background-color: #f2f2f2;
   text-align: center;
 }
-.skills h2 {
-  display: inline-block;
-}
 .skills .skillsIconGallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -567,4 +564,21 @@ section {
   .skills .devIconContainer {
     width: calc(50% - 40px);
   }
+}
+.portfolio {
+  text-align: center;
+}
+.portfolio .portfolioGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.portfolio .portfolioContainer {
+  width: calc(33.3333333333% - 10px);
+  margin: 40px 5px;
+}
+.portfolio .portfolioContainer img {
+  min-width: 380px;
 }

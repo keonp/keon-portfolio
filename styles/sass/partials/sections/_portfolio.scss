@@ -1,0 +1,16 @@
+.portfolio {
+    text-align: center;
+
+    .portfolioGallery {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .portfolioContainer {
+        @include containerWidth(3, 10px);
+        margin: 40px 5px;
+        img {
+            min-width: 380px;
+        }
+    }
+}

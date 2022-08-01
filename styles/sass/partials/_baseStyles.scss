@@ -68,3 +68,7 @@ section {
         right: -5%;
     }
 }
+
+@mixin containerWidth($columns, $pixels) {
+    width: calc((100% / $columns) - $pixels);
+}
