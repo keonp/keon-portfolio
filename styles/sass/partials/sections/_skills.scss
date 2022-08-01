@@ -1,3 +1,7 @@
+@mixin iconWidth($columns) {
+    width: calc((100% / $columns) - 40px);
+}
+
 .skills {
     // padding: 50px 0 0 0;
     background-color: $offWhite;
@@ -10,10 +14,11 @@
     .skillsIconGallery {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .devIconContainer {
-        width: calc(20% - 40px);
+        @include iconWidth(5);
         margin: 40px 20px;
         color: $accent;
         transition: 0.3s;
@@ -22,8 +27,24 @@
         }
 
         &:hover {
-            color: gold;
+            color: $gold;
             transform: translateY(-10px);
+        }
+    }
+}
+
+@media (max-width: 645px) {
+    .skills {
+        .devIconContainer  {
+            @include iconWidth(3);
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .skills {
+        .devIconContainer  {
+            @include iconWidth(2);
         }
     }
 }

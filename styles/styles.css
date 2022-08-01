@@ -538,6 +538,9 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .skills .devIconContainer {
   width: calc(20% - 40px);
@@ -550,7 +553,18 @@ section {
   font-size: 80px;
 }
 .skills .devIconContainer:hover {
-  color: gold;
+  color: #ffd700;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+@media (max-width: 645px) {
+  .skills .devIconContainer {
+    width: calc(33.3333333333% - 40px);
+  }
+}
+@media (max-width: 460px) {
+  .skills .devIconContainer {
+    width: calc(50% - 40px);
+  }
 }
