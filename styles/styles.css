@@ -242,7 +242,6 @@ p {
   line-height: 32px;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .button {
@@ -376,6 +375,7 @@ section {
 }
 .header p {
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 
 @media (max-width: 645px) {
@@ -408,6 +408,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   position: sticky;
+  z-index: 100;
   top: 0;
 }
 .navBar .navBarContainer {
@@ -568,17 +569,46 @@ section {
 .portfolio {
   text-align: center;
 }
+.portfolio .underline {
+  margin-bottom: 40px;
+}
 .portfolio .portfolioGallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 .portfolio .portfolioContainer {
   width: calc(33.3333333333% - 10px);
-  margin: 40px 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 5px 5px;
+  position: relative;
 }
-.portfolio .portfolioContainer img {
-  min-width: 380px;
+.portfolio .projectDescription {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  border: 1px solid black;
+}
+.portfolio .displayDescription {
+  visibility: visible;
+  z-index: 10;
+}
+.portfolio .hide {
+  opacity: 0.2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -10;
+}
+
+@media (max-width: 855px) {
+  .portfolio .portfolioContainer {
+    width: calc(50% - 10px);
+  }
 }
