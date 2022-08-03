@@ -4,8 +4,8 @@ const navBar = document.querySelector('.navBar');
 const hamburgerMenu = document.querySelector('.hamburgerMenu');
 const navBarContainer = document.querySelector('.navBarContainer');
 const mobileNav = document.querySelector('.mobileNav');
-const projectImg = document.querySelectorAll('.projectImg');
-console.log(projectImg);
+
+const portfolioContainer = document.querySelectorAll('.portfolioContainer');
 
 
 app.displayMobileMenu = () => {
@@ -17,21 +17,19 @@ app.displayMobileMenu = () => {
 }
 
 app.displayProjectDescription = () => {
-    projectImg.forEach(img => {
+    portfolioContainer.forEach((project) => {
 
-        const image = img;
-        img.addEventListener('pointerover', function() {
+        const projectDescription = project.children[0];
+        const imageElement = project.children[1];
 
-            const projectDescription = image.parentElement.children[0];
-            // console.log(this);
-            image.classList.toggle('hide');
+        imageElement.addEventListener('pointerover', function() {
+            imageElement.classList.toggle('hide');
             projectDescription.classList.toggle('displayDescription');
+        })
 
-            // projectDescription.addEventListener('pointerout', function() {
-
-            //     image.classList.toggle('hide');
-            //     projectDescription.classList.toggle('displayDescription');
-            // })
+        projectDescription.addEventListener('pointerout', function() {
+            imageElement.classList.toggle('hide');
+            projectDescription.classList.toggle('displayDescription');
         })
     })
 }
