@@ -16,27 +16,27 @@ app.displayMobileMenu = () => {
     })
 }
 
-app.displayProjectDescription = () => {
-    portfolioContainer.forEach((project) => {
+// app.displayProjectDescription = () => {
+//     portfolioContainer.forEach((project) => {
 
-        const projectDescription = project.children[0];
-        const imageElement = project.children[1];
+//         const projectDescription = project.children[0];
+//         const imageElement = project.children[1];
 
-        imageElement.addEventListener('pointerover', function() {
-            imageElement.classList.toggle('hide');
-            projectDescription.classList.toggle('displayDescription');
-        })
+//         imageElement.addEventListener('pointerover', function() {
+//             imageElement.classList.toggle('hide');
+//             projectDescription.classList.toggle('displayDescription');
+//         })
 
-        projectDescription.addEventListener('pointerout', function() {
-            imageElement.classList.toggle('hide');
-            projectDescription.classList.toggle('displayDescription');
-        })
-    })
-}
+//         projectDescription.addEventListener('pointerout', function() {
+//             imageElement.classList.toggle('hide');
+//             projectDescription.classList.toggle('displayDescription');
+//         })
+//     })
+// }
 
 app.init = () => {
     app.displayMobileMenu();
-    app.displayProjectDescription();
+    // app.displayProjectDescription();
 }
 
 app.init();

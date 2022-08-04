@@ -238,6 +238,12 @@ h2 {
   font-weight: normal;
 }
 
+h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
 p {
   line-height: 32px;
   font-weight: bold;
@@ -589,6 +595,18 @@ section {
   margin: 5px 5px;
   position: relative;
 }
+.portfolio .portfolioContainer:hover .projectImg {
+  opacity: 0.2;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  z-index: -10;
+}
+.portfolio .portfolioContainer:hover .projectDescription {
+  visibility: visible;
+  z-index: 10;
+  top: 0;
+  color: black;
+}
 .portfolio .projectDescription {
   position: absolute;
   width: 100%;
@@ -602,22 +620,57 @@ section {
 }
 .portfolio .projectDescription p {
   font-size: 0.9rem;
+  font-weight: normal;
+  line-height: 30px;
 }
-.portfolio .displayDescription {
-  visibility: visible;
-  z-index: 10;
-  top: 0;
+.portfolio .anchorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.portfolio .anchorContainer a {
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F24259;
+  border: 1px solid #F24259;
+  color: #FFFFFF;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.portfolio .anchorContainer a:hover {
+  background-color: #FFFFFF;
+  border: 1px solid #161616;
   color: black;
 }
-.portfolio .hide {
-  opacity: 0.2;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  z-index: -10;
+.portfolio .anchorContainer .magnifyingAnchor {
+  margin-right: 5px;
 }
 
+@media (max-width: 935px) {
+  .portfolio .projectDescription p {
+    line-height: 2.5vw;
+  }
+}
 @media (max-width: 855px) {
   .portfolio .portfolioContainer {
     width: calc(50% - 10px);
+  }
+  .portfolio .projectDescription p {
+    font-weight: bold;
+    line-height: 30px;
+  }
+}
+@media (max-width: 645px) {
+  .portfolio .portfolioContainer {
+    width: calc(100% - 10px);
   }
 }
