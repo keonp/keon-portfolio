@@ -72,3 +72,8 @@ section {
 @mixin containerWidth($columns, $pixels) {
     width: calc((100% / $columns) - $pixels);
 }
+
+@mixin contactGalleryWidth($min-width, $height) {
+    min-width: $min-width;
+    height: $height;
+}

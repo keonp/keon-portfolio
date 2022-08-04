@@ -708,8 +708,12 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .contact .contactGallery > * {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -723,9 +727,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 280px;
-  height: 160px;
-  margin: 0 20px;
+  min-width: 260px;
+  height: 145px;
+  margin: 20px;
   -webkit-box-shadow: 0px 20px 60px lightgray;
           box-shadow: 0px 20px 60px lightgray;
 }
@@ -738,4 +742,63 @@ section {
 }
 .contact .socialMedia li {
   display: inline;
+}
+.contact .myForm {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact fieldset {
+  -webkit-box-shadow: 0px 20px 60px lightgray;
+          box-shadow: 0px 20px 60px lightgray;
+  min-width: 1000px;
+  padding: 50px;
+}
+.contact .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 35px;
+}
+.contact .inputs input {
+  padding: 5px 4px;
+  width: calc(50% - 10px);
+  border: none;
+  border-bottom: 1px solid black;
+}
+.contact textarea {
+  padding: 5px 4px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+.contact .button {
+  display: block;
+}
+
+@media (max-width: 1182px) {
+  .contact .contactGallery > * {
+    min-width: 240px;
+    height: 125px;
+  }
+}
+@media (max-width: 1105px) {
+  .contact .contactGallery {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact .contactGallery > * {
+    width: calc(50% - 40px);
+  }
+}
+@media (max-width: 645px) {
+  .contact .contactGallery > * {
+    width: calc(100% - 40px);
+  }
 }

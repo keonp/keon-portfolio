@@ -11,18 +11,18 @@
 
     .contactGallery {
         display: flex;
-        // justify-content
+        justify-content: space-around;
         > * {
-            
+            transition: 0.2s;
+
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
             
-            min-width: 280px;
-            height: 160px;
+            @include contactGalleryWidth(260px, 145px);
             
-            margin: 0 20px;
+            margin: 20px;
             box-shadow: 0px 20px 60px lightgray;
 
             p {
@@ -41,6 +41,73 @@
     .socialMedia {
         li {
             display: inline;
+        }
+    }
+
+    .myForm {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    fieldset {
+        // border: none;
+        box-shadow: 0px 20px 60px lightgray;
+        min-width: 1000px;
+        padding: 50px;
+    }
+
+    .inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+
+        input {
+            padding: 5px 4px;
+            @include containerWidth(2, 10px);
+            border: none;
+            border-bottom: 1px solid black;
+        }
+    }
+
+    textarea {
+        padding: 5px 4px;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .button {
+        display: block;
+    }
+}
+
+@media(max-width: 1182px) {
+    .contact {
+        .contactGallery {
+            > * {
+                @include contactGalleryWidth(240px, 125px);
+            }
+        }
+    }
+}
+
+@media(max-width: 1105px) {
+    .contact {
+        .contactGallery {
+            flex-wrap: wrap;
+            > * {
+                @include containerWidth(2, 40px);
+            }
+        }
+    }
+}
+
+@media (max-width: 645px) {
+    .contact {
+        .contactGallery {
+            > * {
+                @include containerWidth(1, 40px);
+            }
         }
     }
 }
