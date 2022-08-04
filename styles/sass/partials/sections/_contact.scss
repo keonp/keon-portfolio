@@ -1,0 +1,46 @@
+.contact {
+    background-color: $offWhite;
+
+    h2 {
+        text-align: center;
+    }
+
+    .underline {
+        margin-bottom: 40px;
+    }
+
+    .contactGallery {
+        display: flex;
+        // justify-content
+        > * {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            min-width: 280px;
+            height: 160px;
+            
+            margin: 0 20px;
+            box-shadow: 0px 20px 60px lightgray;
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .iconContainer {
+        i {
+            font-size: 30px;
+            color: $accent;
+        }
+    }
+    
+    .socialMedia {
+        li {
+            display: inline;
+        }
+    }
+}

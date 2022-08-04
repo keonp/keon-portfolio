@@ -232,21 +232,25 @@ h1 {
   letter-spacing: 1px;
 }
 
-h2 {
-  font-size: 2rem;
+h2, h3, h4 {
   text-transform: uppercase;
   font-weight: normal;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 h3 {
   font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.05rem;
 }
 
 p {
   line-height: 32px;
-  font-weight: bold;
   letter-spacing: 1px;
 }
 
@@ -382,6 +386,7 @@ section {
 .header p {
   color: #FFFFFF;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 @media (max-width: 645px) {
@@ -689,4 +694,48 @@ section {
   .portfolio .portfolioContainer {
     width: calc(100% - 10px);
   }
+}
+.contact {
+  background-color: #f2f2f2;
+}
+.contact h2 {
+  text-align: center;
+}
+.contact .underline {
+  margin-bottom: 40px;
+}
+.contact .contactGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact .contactGallery > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 280px;
+  height: 160px;
+  margin: 0 20px;
+  -webkit-box-shadow: 0px 20px 60px lightgray;
+          box-shadow: 0px 20px 60px lightgray;
+}
+.contact .contactGallery > * p {
+  font-size: 0.9rem;
+}
+.contact .iconContainer i {
+  font-size: 30px;
+  color: #F24259;
+}
+.contact .socialMedia li {
+  display: inline;
 }
