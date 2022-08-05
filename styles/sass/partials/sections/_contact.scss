@@ -43,6 +43,9 @@
             display: flex;
             justify-content: space-between;
             width: 50px;
+            a {
+                color: $accent;
+            }
         }
     }
 

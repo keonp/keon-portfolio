@@ -706,7 +706,7 @@ section {
 .portfolio .anchorContainer .magnifyingAnchor {
   margin-right: 2.5px;
 }
-.portfolio .anchorContainer .linkAnchor {
+.portfolio .anchorContainer .gitAnchor {
   margin-left: 2.5px;
 }
 
@@ -781,6 +781,9 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 50px;
+}
+.contact .socialMedia ul a {
+  color: #F24259;
 }
 .contact .myForm {
   margin-top: 40px;
