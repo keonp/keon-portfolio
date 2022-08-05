@@ -1,24 +1,48 @@
 .about {
-    // padding: 50px 0 0 0;
-
     .wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    h2 {
+        border-bottom: 2px solid $accent;
+        display: inline-block;
     }
 
     .profileImgContainer {
-        width: 40%;
+        width: 35%;
+        transition: 0.2s;
     }
     
     .profileBioContainer {
-        width: 60%;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 45%;
 
-    .profileImg {
-        width: 360px;
-        height: 480px;
-        img {
-            height: 100%;
+        > *:not(.headerContainer),
+        h2 {
+            padding: 10px 0;
         }
     }
+}
+
+@media (max-width: 945px) {
+    .about {
+        .wrapper {
+            flex-direction: column;
+        }
+
+        .profileImgContainer,
+        .profileBioContainer {
+            width: 75%;
+        }
+        .profileBioContainer {
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+    }
+
 }
