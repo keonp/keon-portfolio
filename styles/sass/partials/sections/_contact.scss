@@ -39,8 +39,10 @@
     }
     
     .socialMedia {
-        li {
-            display: inline;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 50px;
         }
     }
 
@@ -51,7 +53,7 @@
     }
 
     fieldset {
-        // border: none;
+        transition: 0.25s;
         box-shadow: 0px 20px 60px lightgray;
         min-width: 1000px;
         padding: 50px;
@@ -78,6 +80,7 @@
 
     .button {
         display: block;
+        transition: 0.25s;
     }
 }
 
@@ -87,6 +90,10 @@
             > * {
                 @include contactGalleryWidth(240px, 125px);
             }
+        }
+
+        fieldset {
+            min-width: 800px;
         }
     }
 }
@@ -98,6 +105,29 @@
             > * {
                 @include containerWidth(2, 40px);
             }
+        }
+    }
+}
+
+@media(max-width: 855px) {
+    .contact {
+        fieldset {
+            min-width: 100%;
+        }
+        
+        .inputs {
+            flex-direction: column;
+            input {
+                @include containerWidth(1, 0px);
+
+                &:nth-child(2){
+                    margin-bottom: 35px;
+                }
+            }
+        }
+
+        .button {
+            width: 100%;
         }
     }
 }
