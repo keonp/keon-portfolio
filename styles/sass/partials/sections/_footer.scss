@@ -1,0 +1,12 @@
+.footer {
+    background-color: $black;
+    color: $white;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        text-align: center;
+    }
+}
