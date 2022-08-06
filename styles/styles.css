@@ -450,7 +450,7 @@ section {
   transition: 0.25s;
 }
 .navBar a:hover, .navBar a:focus {
-  color: #161616;
+  color: #ffd700;
 }
 .navBar .logo {
   font-weight: bold;
@@ -766,8 +766,13 @@ section {
   -webkit-box-shadow: 0px 20px 60px lightgray;
           box-shadow: 0px 20px 60px lightgray;
 }
-.contact .contactGallery > * p {
+.contact .contactGallery > * p,
+.contact .contactGallery > * a {
   font-size: 0.9rem;
+}
+.contact .contactGallery .email a,
+.contact .contactGallery .phone a {
+  color: black;
 }
 .contact .iconContainer i {
   font-size: 30px;
@@ -784,6 +789,11 @@ section {
 }
 .contact .socialMedia ul a {
   color: #F24259;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.contact .socialMedia ul a:hover, .contact .socialMedia ul a:focus {
+  color: #ffd700;
 }
 .contact .myForm {
   margin-top: 40px;
