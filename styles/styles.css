@@ -386,6 +386,18 @@ section {
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: bold;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header p::after {
+  content: "|";
+  font-size: 1.45rem;
+  position: absolute;
+  top: -5%;
+  visibility: visible;
+  color: grey;
+  font-weight: normal;
 }
 
 @media (max-width: 645px) {

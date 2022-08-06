@@ -40,6 +40,20 @@
         color: $white;
         text-transform: uppercase;
         font-weight: bold;
+        position: relative;
+        transition: 0.3s;
+        // visibility: hidden;
+
+        &::after {
+            content: "|";
+            font-size: 1.45rem;
+            position: absolute;
+            top: -5%;
+            visibility: visible;
+            color: grey;
+            font-weight: normal;
+            // left: -2%;
+        }
     }
 }
 
