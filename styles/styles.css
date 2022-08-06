@@ -273,6 +273,7 @@ h1,
 html {
   font-size: 125%;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -371,11 +372,9 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header .buttonsContainer .button {
+.header .buttonsContainer .contactMe {
   -webkit-transition: 0.25s;
   transition: 0.25s;
-}
-.header .buttonsContainer .contactMe {
   color: #161616;
   background-color: #FFFFFF;
 }
@@ -653,9 +652,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -668,6 +664,9 @@ section {
   top: -85px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+}
+.portfolio .projectDescription > * {
+  margin-top: 10px;
 }
 .portfolio .projectDescription p {
   font-size: 0.9rem;
@@ -835,8 +834,15 @@ section {
 }
 .contact .button {
   display: block;
+  border: 1px solid #F24259;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  cursor: pointer;
+}
+.contact .button:hover, .contact .button:focus {
+  color: #161616;
+  background-color: #FFFFFF;
+  border: 1px solid #161616;
 }
 
 @media (max-width: 1182px) {

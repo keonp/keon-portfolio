@@ -98,7 +98,16 @@
 
     .button {
         display: block;
+        border: 1px solid $accent;
         transition: 0.25s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $black;
+            background-color: $white;
+            border: 1px solid $black;
+        }
     }
 }
 

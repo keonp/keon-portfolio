@@ -22,11 +22,8 @@
         display: flex;
         justify-content: space-between;
 
-        .button {
-            transition: 0.25s;
-        }
-
         .contactMe {
+            transition: 0.25s;
             color: $black;
             background-color: $white;
 

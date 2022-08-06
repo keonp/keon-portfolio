@@ -37,7 +37,6 @@
     .projectDescription {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
         align-items: center;
 
         position: absolute;
@@ -51,6 +50,11 @@
 
         top: -85px;
         transition: 0.2s ease;
+
+        > * {
+            margin-top: 10px;
+        }
+
         p {
             font-size: 0.9rem;
             text-align: center;
@@ -61,6 +65,7 @@
 
     .anchorContainer {
         display: flex;
+        // margin-top: 10px;
         a {
             width: 35px;
             height: 35px;
