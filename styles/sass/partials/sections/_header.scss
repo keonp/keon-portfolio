@@ -36,24 +36,65 @@
 
     }
     
-    p {
+    .subtext {
         color: $white;
         text-transform: uppercase;
         font-weight: bold;
-        position: relative;
-        transition: 0.3s;
+        // position: relative;
+        transition: 1.5s;
         // visibility: hidden;
 
-        &::after {
-            content: "|";
-            font-size: 1.45rem;
-            position: absolute;
-            top: -5%;
-            visibility: visible;
-            color: grey;
-            font-weight: normal;
-            // left: -2%;
-        }
+        width: 100%;
+        text-align: center;
+        // display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+
+
+        // animation: swipeIn 1.5s linear 1;
+
+        // &::after {
+        //     content: "|";
+        //     font-size: 1.45rem;
+        //     position: absolute;
+        //     top: -5%;
+        //     color: grey;
+        //     font-weight: normal;
+        //     // left: -2%;
+        // }
+    }
+
+    
+    .swipe {
+        // animation: swipeIn 1.5s linear 1;
+        // @include swipeEffect(0%, 1.5s);
+        width: 0%;
+        // transition: 1.5s;
+        // width: 0%;
+    }
+
+    // .swipeOut {
+    //     // animation: swipeOut 1.5s linear infinite;
+    //     @include swipeEffect(100%, 1.5s);
+    // }
+
+    .textSwipe {
+        color: grey;
+        font-size: 1.3rem;
+    }
+
+    .subtextContainer {
+        display: flex;
+        // position: relative;
+        // &::after {
+        //     content: "|";
+        //     font-size: 1.45rem;
+        //     position: absolute;
+        //     top: -10%;
+        //     color: grey;
+        //     font-weight: normal;
+        //     right: -4%;
+        // }
     }
 }
 

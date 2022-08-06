@@ -11,6 +11,16 @@ const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
 const submitButton = document.querySelector('.submitButton');
 const inputElements = document.querySelectorAll('.inputField');
 
+const subtext = document.querySelector('.subtext');
+
+app.subtextList = [
+    'front-end developer',
+    'amateur jiu-jitsu practioner',
+    'problem solver',
+    'technology enthusiast'
+];
+// console.log(subtext);
+
 // app.handleFormSubmission = () => {
 //     submitButton.addEventListener('submit', () => {
 
@@ -23,6 +33,26 @@ const inputElements = document.querySelectorAll('.inputField');
 // }
 
 // console.log(inputElements);
+
+app.swipeEffect = () => {
+    // let i = 1;
+
+    // for (let i = 1; i > 0; i++) {
+
+    //         const updatedText = app.subtextList[i % 4];
+    
+    //     }
+        // while (i) {
+            setTimeout(() => {
+                subtext.classList.toggle('swipe');
+                subtext.textContent = app.subtextList[1 % 4];
+            }, 2000);
+    
+            subtext.classList.toggle('swipe');
+            //     i++;
+    // }
+    
+}
 
 app.displayMobileMenu = () => {
     hamburgerMenu.addEventListener('click', function() {
@@ -65,6 +95,7 @@ app.menuRemove = () => {
 app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
+    app.swipeEffect();
     // app.handleFormSubmission();
 }
 
