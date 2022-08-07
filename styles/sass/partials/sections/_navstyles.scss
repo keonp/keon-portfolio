@@ -25,11 +25,12 @@
         color: $white;
         text-transform: uppercase;
         letter-spacing: 1px;
-        transition: 0.25s;
+        // transition: 0.25s;
 
         &:hover,
         &:focus {
             color: $gold;
+            border-bottom: 2.5px solid $gold;
         }
     }
 
@@ -55,6 +56,14 @@
             padding: 20px 0 20px 5%;
         }
     }
+
+    .menuBar {
+        transition: 0.5s;
+    }
+
+    .midBar {
+        transition: 0.2s;
+    }
 }
 
 .hamburgerMenu,
@@ -73,6 +82,18 @@
     position: absolute;
     width: 100%;
     left: 0;
+}
+
+.bar1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.bar2 {
+    visibility: hidden;
+}
+
+.bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
 // REVIEW THIS

@@ -13,7 +13,7 @@ const inputElements = document.querySelectorAll('.inputField');
 
 const subtext = document.querySelector('.subtext');
 const subtextContainer = document.querySelector('.subtextContainer');
-
+const menuBar = document.querySelectorAll('.menuBar');
 // app.handleFormSubmission = () => {
 //     submitButton.addEventListener('submit', () => {
 
@@ -60,12 +60,18 @@ app.menuToggle = () => {
     navBar.classList.toggle('extendMenuDrop');
     navBarContainer.classList.toggle('extendMenuBorder');
     mobileNav.classList.toggle('extendMenuDisplay');
+    menuBar[0].classList.toggle('bar1');
+    menuBar[1].classList.toggle('bar2');
+    menuBar[2].classList.toggle('bar3');
 }
 
 app.menuRemove = () => {
     navBar.classList.remove('extendMenuDrop');
     navBarContainer.classList.remove('extendMenuBorder');
     mobileNav.classList.remove('extendMenuDisplay');
+    menuBar[0].classList.remove('bar1');
+    menuBar[1].classList.remove('bar2');
+    menuBar[2].classList.remove('bar3');
 }
 
 app.init = () => {

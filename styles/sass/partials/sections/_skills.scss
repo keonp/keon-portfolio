@@ -1,7 +1,11 @@
 .skills {
-    // padding: 50px 0 0 0;
     background-color: $offWhite;
     text-align: center;
+
+    .wrapper {
+        box-shadow: 0px 20px 60px lightgray;
+        padding: 30px;
+    }
 
     .skillsIconGallery {
         display: flex;

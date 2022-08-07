@@ -1,6 +1,5 @@
 .portfolio {
     text-align: center;
-    // min-width: 883px;
 
     .underline {
         margin-bottom: 40px;
@@ -94,9 +93,22 @@
             margin-left: 2.5px;
         }
     }
+
+    .buttonContainer {
+        margin-top: 10px;
+
+        .anchorButtons {
+            border: 1px solid $accent;
+            transition: 0.25s;
+            &:hover,
+            &:focus {
+                color: $black;
+                background-color: $white;
+                border: 1px solid $black;
+            }
+        }
+    }
 }
-
-
 
 @media (max-width: 935px) {
     .portfolio {
