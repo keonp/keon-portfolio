@@ -20,7 +20,6 @@ app.subtextList = [
     'problem solver',
     'technology enthusiast'
 ];
-// console.log(subtext);
 
 // app.handleFormSubmission = () => {
 //     submitButton.addEventListener('submit', () => {
@@ -36,19 +35,7 @@ app.subtextList = [
 // console.log(inputElements);
 // console.log(subtextContainer.offsetWidth)
 // console.log(subtextContainer)
-app.swipeEffect = () => {
 
-    const updatedText = app.subtextList[1 % 4];
-
-    subtext.classList.toggle('swipeIn');
-        subtext.textContent = updatedText;
-    // setTimeout(() => {
-    // }, 2000);
-    
-    // subtext.classList.toggle('swipe');
-
-    // subtextContainer.offsetWidth = subtext.offsetWidth;
-}
 
 app.displayMobileMenu = () => {
     hamburgerMenu.addEventListener('click', function() {
@@ -91,7 +78,6 @@ app.menuRemove = () => {
 app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
-    // app.swipeEffect();
     // app.handleFormSubmission();
 }
 

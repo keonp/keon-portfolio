@@ -337,61 +337,131 @@ section {
   right: -5%;
 }
 
-@-webkit-keyframes swipey {
+@-webkit-keyframes swipeEffect {
   0% {
-    width: 100%;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    width: 264.567px;
   }
   5% {
-    width: 0%;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    width: 0px;
   }
   10% {
-    width: 0%;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    width: 0px;
   }
   15% {
-    width: 0%;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  20% {
-    width: 100%;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    width: 376.317px;
     content: "amateur jiu-jitsu practioner";
+  }
+  25% {
+    width: 376.317px;
+  }
+  30% {
+    width: 0px;
+  }
+  35% {
+    width: 0px;
+  }
+  40% {
+    width: 0px;
+  }
+  45% {
+    width: 200.283px;
+    content: "problem solver";
+  }
+  50% {
+    width: 200.283px;
+  }
+  55% {
+    width: 0px;
+  }
+  60% {
+    width: 0px;
+  }
+  65% {
+    width: 0px;
+  }
+  70% {
+    width: 295.433px;
+    content: "technology enthusiast";
+  }
+  75% {
+    width: 295.433px;
+  }
+  80% {
+    width: 0px;
+  }
+  85% {
+    width: 0px;
+  }
+  90% {
+    width: 0px;
+  }
+  95% {
+    width: 264.567px;
+    content: "front-end developer";
   }
 }
 
-@keyframes swipey {
+@keyframes swipeEffect {
   0% {
-    width: 100%;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    width: 264.567px;
   }
   5% {
-    width: 0%;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    width: 0px;
   }
   10% {
-    width: 0%;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    width: 0px;
   }
   15% {
-    width: 0%;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  20% {
-    width: 100%;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    width: 376.317px;
     content: "amateur jiu-jitsu practioner";
+  }
+  25% {
+    width: 376.317px;
+  }
+  30% {
+    width: 0px;
+  }
+  35% {
+    width: 0px;
+  }
+  40% {
+    width: 0px;
+  }
+  45% {
+    width: 200.283px;
+    content: "problem solver";
+  }
+  50% {
+    width: 200.283px;
+  }
+  55% {
+    width: 0px;
+  }
+  60% {
+    width: 0px;
+  }
+  65% {
+    width: 0px;
+  }
+  70% {
+    width: 295.433px;
+    content: "technology enthusiast";
+  }
+  75% {
+    width: 295.433px;
+  }
+  80% {
+    width: 0px;
+  }
+  85% {
+    width: 0px;
+  }
+  90% {
+    width: 0px;
+  }
+  95% {
+    width: 264.567px;
+    content: "front-end developer";
   }
 }
 .header {
@@ -439,53 +509,34 @@ section {
   color: #FFFFFF;
   background-color: #F24259;
 }
+.header .subtextContainer {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  position: relative;
+}
 .header .subtext {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: bold;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  width: 100%;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .header .subtext::before {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   content: "Front-End Developer";
-  width: 100%;
   display: block;
   white-space: nowrap;
   overflow: hidden;
+  -webkit-animation: swipeEffect 10s linear 1;
+          animation: swipeEffect 10s linear 1;
 }
 .header .subtext::after {
   content: "|";
   color: grey;
-  font-size: 1.8rem;
-}
-.header .swipe {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  max-width: 0;
-}
-.header .swipeIn {
-  -webkit-animation: swipey 1.5s linear 1;
-          animation: swipey 1.5s linear 1;
-}
-.header .textSwipe {
-  color: grey;
   font-size: 1.3rem;
-}
-.header .subtextContainer {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  right: -4%;
+  top: -3%;
 }
 
 @media (max-width: 645px) {

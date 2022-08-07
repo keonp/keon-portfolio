@@ -35,65 +35,35 @@
         }
 
     }
-    
-    .subtext {
-        display: flex;
-        // position: relative;
-
-        color: $white;
-        text-transform: uppercase;
-        font-weight: bold;
-        transition: 1.5s;
-
-        width: 100%;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        &::before {
-            transition: 0.2s;
-            content: 'Front-End Developer';
-            // transition: 1.5s;
-            width: 100%;
-            display: block;
-            white-space: nowrap;
-            overflow: hidden;
-            // animation: swipey 10s linear 1;
-        }
-        &::after {
-            content: "|";
-            color: grey;
-            font-size: 1.8rem;
-
-            // position: absolute;
-            // right: 0;
-            // top: 0;
-        }
-    }
-
-    
-    .swipe {
-        // animation: swipeIn 1.5s linear 1;
-        // @include swipeEffect(0%, 1.5s);
-        // width: 0%;
-        // max-width: 0;
-        transition: 1.5s;
-        max-width: 0;
-    }
-
-    .swipeIn {
-        // animation: swipeOut 1.5s linear infinite;
-        // @include swipeEffect(100%, 1.5s);
-        animation: swipey 1.5s linear 1;
-    }
-
-    .textSwipe {
-        color: grey;
-        font-size: 1.3rem;
-    }
 
     .subtextContainer {
         transition: 1.5s;
-        display: flex;
+        position: relative;
+    }
+    
+    .subtext {
+        color: $white;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+
+        &::before {
+            transition: 0.2s;
+            content: 'Front-End Developer';
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: swipeEffect 10s linear 1;
+        }
+        
+        &::after {
+            content: "|";
+            color: grey;
+            font-size: 1.3rem;
+            position: absolute;
+            right: -4%;
+            top: -3%;
+        }
     }
 }
 
