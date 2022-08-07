@@ -14,13 +14,6 @@ const inputElements = document.querySelectorAll('.inputField');
 const subtext = document.querySelector('.subtext');
 const subtextContainer = document.querySelector('.subtextContainer');
 
-app.subtextList = [
-    'front-end developer',
-    'amateur jiu-jitsu practioner',
-    'problem solver',
-    'technology enthusiast'
-];
-
 // app.handleFormSubmission = () => {
 //     submitButton.addEventListener('submit', () => {
 

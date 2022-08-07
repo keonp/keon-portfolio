@@ -393,9 +393,6 @@ section {
     width: 0px;
   }
   90% {
-    width: 0px;
-  }
-  95% {
     width: 264.567px;
     content: "front-end developer";
   }
@@ -457,9 +454,6 @@ section {
     width: 0px;
   }
   90% {
-    width: 0px;
-  }
-  95% {
     width: 264.567px;
     content: "front-end developer";
   }
@@ -490,28 +484,17 @@ section {
 .header .wrapper > * {
   margin: 10px 0;
 }
-.header .buttonsContainer {
-  min-width: 340px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.header .buttonsContainer .contactMe {
+.header .contactMe {
   -webkit-transition: 0.25s;
   transition: 0.25s;
   color: #161616;
   background-color: #FFFFFF;
 }
-.header .buttonsContainer .contactMe:hover, .header .buttonsContainer .contactMe:focus {
+.header .contactMe:hover, .header .contactMe:focus {
   color: #FFFFFF;
   background-color: #F24259;
 }
 .header .subtextContainer {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
   position: relative;
 }
 .header .subtext {
@@ -527,12 +510,12 @@ section {
   display: block;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: swipeEffect 10s linear 1;
-          animation: swipeEffect 10s linear 1;
+  -webkit-animation: swipeEffect 10s linear infinite;
+          animation: swipeEffect 10s linear infinite;
 }
 .header .subtext::after {
   content: "|";
-  color: grey;
+  color: #F24259;
   font-size: 1.3rem;
   position: absolute;
   right: -4%;
@@ -783,13 +766,13 @@ section {
   margin: 5px 5px;
   position: relative;
 }
-.portfolio .portfolioContainer:hover .projectImg {
+.portfolio .portfolioContainer:hover .projectImg, .portfolio .portfolioContainer:focus .projectImg {
   opacity: 0.2;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   z-index: -10;
 }
-.portfolio .portfolioContainer:hover .projectDescription {
+.portfolio .portfolioContainer:hover .projectDescription, .portfolio .portfolioContainer:focus .projectDescription {
   visibility: visible;
   z-index: 10;
   top: 0;

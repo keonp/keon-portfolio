@@ -17,27 +17,19 @@
         }
     }
 
-    .buttonsContainer {
-        min-width: 340px;
-        display: flex;
-        justify-content: space-between;
+    .contactMe {
+        transition: 0.25s;
+        color: $black;
+        background-color: $white;
 
-        .contactMe {
-            transition: 0.25s;
-            color: $black;
-            background-color: $white;
-
-            &:hover,
-            &:focus {
-                color: $white;
-                background-color: $accent;
-            }
+        &:hover,
+        &:focus {
+            color: $white;
+            background-color: $accent;
         }
-
     }
 
     .subtextContainer {
-        transition: 1.5s;
         position: relative;
     }
     
@@ -53,12 +45,12 @@
             display: block;
             white-space: nowrap;
             overflow: hidden;
-            animation: swipeEffect 10s linear 1;
+            animation: swipeEffect 10s linear infinite;
         }
         
         &::after {
             content: "|";
-            color: grey;
+            color: $accent;
             font-size: 1.3rem;
             position: absolute;
             right: -4%;
