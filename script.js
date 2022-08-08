@@ -4,35 +4,17 @@ const navBar = document.querySelector('.navBar');
 const hamburgerMenu = document.querySelector('.hamburgerMenu');
 const navBarContainer = document.querySelector('.navBarContainer');
 const mobileNav = document.querySelector('.mobileNav');
-
-const portfolioContainer = document.querySelectorAll('.portfolioContainer');
 const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
-
-const submitButton = document.querySelector('.submitButton');
-const inputElements = document.querySelectorAll('.inputField');
-
-const subtext = document.querySelector('.subtext');
-const subtextContainer = document.querySelector('.subtextContainer');
 const menuBar = document.querySelectorAll('.menuBar');
-// app.handleFormSubmission = () => {
-//     submitButton.addEventListener('submit', () => {
 
-//         inputElements.forEach((inputEl) => {
-//             console.log(inputEl.value);
-//             inputEl.value = "test@testmail.com";
-//         })
-
-//     })
-// }
-
-// console.log(inputElements);
-// console.log(subtextContainer.offsetWidth)
-// console.log(subtextContainer)
-
-
+// A method to display the mobile menu
 app.displayMobileMenu = () => {
     hamburgerMenu.addEventListener('click', function() {
         app.menuToggle();
+
+        document.querySelector('.logo a').addEventListener('click', () => {
+            app.menuRemove();
+        })
 
         // Window resize listen event
         window.addEventListener('resize', function() {
@@ -47,7 +29,7 @@ app.displayMobileMenu = () => {
     })
 }
 
-
+// A method to close  the mobile menu once a link on the mobile menu has been clicked
 app.closeMobileMenu = () => {
     mobileNavLinks.forEach((link) => {
         link.addEventListener('click', () => {
@@ -56,6 +38,7 @@ app.closeMobileMenu = () => {
     })
 }
 
+// a method to toggle classes related to mobile menu display
 app.menuToggle = () => {
     navBar.classList.toggle('extendMenuDrop');
     navBarContainer.classList.toggle('extendMenuBorder');
@@ -65,6 +48,7 @@ app.menuToggle = () => {
     menuBar[2].classList.toggle('bar3');
 }
 
+// a method to remove classes related to mobile menu display
 app.menuRemove = () => {
     navBar.classList.remove('extendMenuDrop');
     navBarContainer.classList.remove('extendMenuBorder');
@@ -77,7 +61,6 @@ app.menuRemove = () => {
 app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
-    // app.handleFormSubmission();
 }
 
 app.init();
