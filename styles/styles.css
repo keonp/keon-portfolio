@@ -337,6 +337,19 @@ section {
   right: -5%;
 }
 
+.fade {
+  position: relative;
+  top: -40px;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  opacity: 0;
+}
+
+.show {
+  top: 0;
+  opacity: 1;
+}
+
 @-webkit-keyframes swipeEffect {
   0% {
     width: 264.567px;

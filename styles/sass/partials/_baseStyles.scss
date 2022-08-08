@@ -69,3 +69,15 @@ section {
         right: -5%;
     }
 }
+
+.fade {
+    position: relative;
+    top: -40px;
+    transition: all 0.8s ease-out;
+    opacity: 0;
+}
+
+.show {
+    top: 0;
+    opacity: 1;
+}
