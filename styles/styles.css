@@ -368,7 +368,7 @@ section {
   }
   25% {
     width: 376.317px;
-    content: "amateur jiu-jitsu practioner";
+    content: "casual jiu-jitsu practioner";
   }
   35% {
     width: 376.317px;
@@ -435,7 +435,7 @@ section {
   }
   25% {
     width: 376.317px;
-    content: "amateur jiu-jitsu practioner";
+    content: "casual jiu-jitsu practioner";
   }
   35% {
     width: 376.317px;
@@ -550,6 +550,14 @@ section {
 @media (max-width: 645px) {
   .header h1 {
     font-size: 11.5vw;
+  }
+}
+@media (max-width: 365px) {
+  .header .subtext {
+    font-size: 0.85rem;
+  }
+  .header .subtext::after {
+    top: -8%;
   }
 }
 .navBar {
@@ -768,6 +776,21 @@ section {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
+.skills .accessibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .skills .skillName {
   font-size: 1rem;
 }
@@ -809,18 +832,6 @@ section {
   transition: 0.3s;
   margin: 5px 5px;
   position: relative;
-}
-.portfolio .portfolioContainer:hover .projectImg, .portfolio .portfolioContainer:focus .projectImg {
-  opacity: 0.2;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  z-index: -10;
-}
-.portfolio .portfolioContainer:hover .projectDescription, .portfolio .portfolioContainer:focus .projectDescription {
-  visibility: visible;
-  z-index: 10;
-  top: 0;
-  color: #161616;
 }
 .portfolio .projectDescription {
   display: -webkit-box;
@@ -900,6 +911,23 @@ section {
   border: 1px solid #161616;
 }
 
+@media (min-width: 646px) {
+  .portfolio .portfolioContainer:hover .projectImg, .portfolio .portfolioContainer:focus .projectImg {
+    opacity: 0.2;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    z-index: -10;
+  }
+  .portfolio .portfolioContainer:hover .projectDescription, .portfolio .portfolioContainer:focus .projectDescription {
+    visibility: visible;
+    z-index: 10;
+    top: 0;
+    color: #161616;
+  }
+  .portfolio .mobileDescrption {
+    display: none;
+  }
+}
 @media (max-width: 935px) {
   .portfolio .projectDescription p {
     line-height: 2.5vw;
@@ -916,6 +944,9 @@ section {
 @media (max-width: 645px) {
   .portfolio .portfolioContainer {
     width: calc(100% - 10px);
+  }
+  .portfolio .desktopDescription {
+    display: none;
   }
 }
 .contact {

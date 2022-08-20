@@ -67,3 +67,16 @@
         }
     }
 }
+
+@media (max-width: 365px) {
+    .header {
+
+        .subtext {
+            font-size: 0.85rem;
+
+            &::after {
+                top: -8%;
+            }
+        }
+    }
+}

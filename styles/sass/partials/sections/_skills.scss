@@ -28,6 +28,13 @@
         }
     }
 
+    .accessibility {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .skillName {
         font-size: 1rem;
     }

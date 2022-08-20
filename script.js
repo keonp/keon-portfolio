@@ -85,8 +85,9 @@ app.fadeIn = () => {
             observer.observe(element);
         })
     }
-
 }
+
+
 
 app.init = () => {
     app.displayMobileMenu();
