@@ -252,6 +252,7 @@ h4 {
 p {
   line-height: 32px;
   letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
 }
 
 .button {
@@ -368,52 +369,7 @@ section {
   }
   25% {
     width: 376.317px;
-    content: "casual jiu-jitsu practioner";
-  }
-  35% {
-    width: 376.317px;
-  }
-  40% {
-    width: 0px;
-  }
-  45% {
-    width: 0px;
-  }
-  50% {
-    width: 0px;
-  }
-  55% {
-    width: 200.283px;
-    content: "problem solver";
-  }
-  60% {
-    width: 200.283px;
-  }
-  65% {
-    width: 0px;
-  }
-  70% {
-    width: 0px;
-  }
-  75% {
-    width: 0px;
-  }
-  80% {
-    width: 295.433px;
-    content: "technology enthusiast";
-  }
-  85% {
-    width: 295.433px;
-  }
-  90% {
-    width: 0px;
-  }
-  95% {
-    width: 0px;
-  }
-  100% {
-    width: 264.567px;
-    content: "front-end developer";
+    content: "amateur jiu-jitsu practioner";
   }
 }
 
@@ -435,52 +391,29 @@ section {
   }
   25% {
     width: 376.317px;
-    content: "casual jiu-jitsu practioner";
+    content: "amateur jiu-jitsu practioner";
   }
-  35% {
-    width: 376.317px;
-  }
-  40% {
-    width: 0px;
-  }
-  45% {
-    width: 0px;
+}
+@-webkit-keyframes testSwipe {
+  0% {
+    width: 100%;
   }
   50% {
-    width: 0px;
-  }
-  55% {
-    width: 200.283px;
-    content: "problem solver";
-  }
-  60% {
-    width: 200.283px;
-  }
-  65% {
-    width: 0px;
-  }
-  70% {
-    width: 0px;
-  }
-  75% {
-    width: 0px;
-  }
-  80% {
-    width: 295.433px;
-    content: "technology enthusiast";
-  }
-  85% {
-    width: 295.433px;
-  }
-  90% {
-    width: 0px;
-  }
-  95% {
-    width: 0px;
+    width: 50%;
   }
   100% {
-    width: 264.567px;
-    content: "front-end developer";
+    width: 0%;
+  }
+}
+@keyframes testSwipe {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
   }
 }
 .header {
@@ -512,12 +445,14 @@ section {
 .header .contactMe {
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  color: #161616;
-  background-color: #FFFFFF;
-}
-.header .contactMe:hover, .header .contactMe:focus {
   color: #FFFFFF;
   background-color: #2ba5e2;
+  border: 1px solid #2ba5e2;
+}
+.header .contactMe:hover, .header .contactMe:focus {
+  color: #161616;
+  background-color: #FFFFFF;
+  border: 1px solid #161616;
 }
 .header .subtextContainer {
   position: relative;
@@ -535,8 +470,6 @@ section {
   display: block;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: swipeEffect 13s linear infinite;
-          animation: swipeEffect 13s linear infinite;
 }
 .header .subtext::after {
   content: "|";
@@ -706,6 +639,9 @@ section {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+.about .profileImg img {
+  border-radius: 50%;
+}
 .about .profileBioContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -816,24 +752,14 @@ section {
 .portfolio .underline {
   margin-bottom: 40px;
 }
-.portfolio .portfolioGallery {
+.portfolio .newPortfolioContainer {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
-.portfolio .portfolioContainer {
-  width: calc(33.3333333333% - 10px);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  margin: 5px 5px;
-  position: relative;
-}
-.portfolio .projectDescription {
+.portfolio .newProjectDescriptionContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -841,36 +767,30 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 32.2px);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.portfolio .newProjectDescriptionContainer p {
   text-align: left;
-  visibility: hidden;
-  color: transparent;
-  top: -85px;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
 }
-.portfolio .projectDescription > * {
-  margin-top: 10px;
+.portfolio .projectSkills > * {
+  display: inline-block;
+  border: 2px solid #161616;
+  color: #e2c42b;
+  background-color: #161616;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px 0;
 }
-.portfolio .projectDescription p {
-  font-size: 0.9rem;
-  text-align: center;
-  font-weight: normal;
-  line-height: 30px;
+.portfolio .project1Img {
+  width: 25px;
+  height: 25px;
 }
-.portfolio .anchorContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.portfolio .anchorContainer a {
-  width: 35px;
-  height: 35px;
+.portfolio .projectTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -880,22 +800,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #2ba5e2;
-  border: 1px solid #2ba5e2;
-  color: #FFFFFF;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
-.portfolio .anchorContainer a:hover {
-  background-color: #FFFFFF;
-  border: 1px solid #161616;
-  color: #161616;
-}
-.portfolio .anchorContainer .magnifyingAnchor {
-  margin-right: 2.5px;
-}
-.portfolio .anchorContainer .gitAnchor {
-  margin-left: 2.5px;
+.portfolio .project1Container {
+  padding: 10px;
 }
 .portfolio .buttonContainer {
   margin-top: 10px;
