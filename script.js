@@ -6,6 +6,45 @@ const navBarContainer = document.querySelector('.navBarContainer');
 const mobileNav = document.querySelector('.mobileNav');
 const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
 const menuBar = document.querySelectorAll('.menuBar');
+const aboutMeList = [
+    'amateur jiu-jitsu practioner',
+    'problem solver',
+    'technology enthusiast',
+    'front-end developer'
+];
+
+const subtext = document.querySelector('.subtext');
+console.log(subtext);
+
+app.aboutMeLoop = async () => {
+    let i = 0;
+    let j = 0;
+    let subtextContent = [];
+    let isDeleting = false;
+
+    subtext.textContent = subtextContent.join('');
+
+    if (i < aboutMeList.length) {
+
+        if (!isDeleting && j < aboutMeList[i].length) {
+            subtextContent.push(aboutMeList[i][j]);
+            j++;
+        }
+
+        if (isDeleting && j <= aboutMeList[i].length) {
+            subtextContent.pop();
+            j--;
+        }
+
+        if (j === aboutMeList[i].length) {
+            isDeleting = true;
+        }
+
+    }
+
+
+}
+
 
 // A method to display the mobile menu
 app.displayMobileMenu = () => {

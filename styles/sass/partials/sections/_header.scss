@@ -42,12 +42,12 @@
         text-align: center;
 
         &::before {
-            transition: 0.2s;
-            content: 'Front-End Developer';
+            // transition: 0.2s;
+            // content: 'Front-End Developer';
             // content: 'amateur jiu-jitsu practioner';
             display: block;
-            white-space: nowrap;
-            overflow: hidden;
+            // white-space: nowrap;
+            // overflow: hidden;
             // animation: swipeEffect 13s linear infinite;
             // animation: testSwipe 3s linear infinite;
         }
