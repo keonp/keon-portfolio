@@ -758,8 +758,24 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+}
+.portfolio .newProjectImgContainer {
+  width: 42.7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .portfolio .newProjectDescriptionContainer {
+  width: 57.3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -786,7 +802,7 @@ section {
   border-radius: 10px;
   margin: 5px 0;
 }
-.portfolio .project1Img {
+.portfolio .projectImg {
   width: 25px;
   height: 25px;
 }
@@ -818,34 +834,31 @@ section {
   border: 1px solid #161616;
 }
 
-@media (min-width: 646px) {
-  .portfolio .portfolioContainer:hover .projectImg, .portfolio .portfolioContainer:focus .projectImg {
-    opacity: 0.2;
-    -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
-    z-index: -10;
-  }
-  .portfolio .portfolioContainer:hover .projectDescription, .portfolio .portfolioContainer:focus .projectDescription {
-    visibility: visible;
-    z-index: 10;
-    top: 0;
-    color: #161616;
-  }
-  .portfolio .mobileDescrption {
-    display: none;
-  }
-}
 @media (max-width: 935px) {
   .portfolio .projectDescription p {
     line-height: 2.5vw;
   }
 }
 @media (max-width: 855px) {
-  .portfolio .portfolioContainer {
-    width: calc(50% - 10px);
+  .portfolio .projectSkills > * {
+    margin: 10px 0;
   }
-  .portfolio .projectDescription p {
-    line-height: 30px;
+  .portfolio .newProjectImgContainer,
+.portfolio .newProjectDescriptionContainer {
+    width: 100%;
+  }
+  .portfolio .newProjectDescriptionContainer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .portfolio .newProjectDescriptionContainer p {
+    text-align: center;
+  }
+}
+@media (max-width: 324px) {
+  .portfolio .project1Title {
+    display: -webkit-box;
   }
 }
 @media (max-width: 645px) {
