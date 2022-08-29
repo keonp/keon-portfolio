@@ -232,21 +232,21 @@ h1 {
   letter-spacing: 1px;
 }
 
-h2, h3, h4 {
-  text-transform: uppercase;
-  font-weight: normal;
-}
-
 h2 {
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 1.05rem;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 p {
@@ -263,6 +263,7 @@ p {
   line-height: 32px;
   font-size: 0.9rem;
   letter-spacing: 0.8px;
+  border-radius: 10px;
 }
 
 h1,
@@ -416,6 +417,30 @@ section {
     width: 0%;
   }
 }
+@-webkit-keyframes navGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes navGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-webkit-keyframes colorGradient {}
+@keyframes colorGradient {}
 .header {
   height: 100vh;
   background-image: url(../assets/header-background.jpg);
@@ -494,7 +519,10 @@ section {
   }
 }
 .navBar {
-  background-color: #2ba5e2;
+  background: linear-gradient(-45deg, #2ba5e2, #009CC4, #e2c42b, #009CC4, #2ba5e2);
+  background-size: 600%;
+  -webkit-animation: navGradient 30s ease infinite;
+          animation: navGradient 30s ease infinite;
   height: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,8 +560,8 @@ section {
   letter-spacing: 1px;
 }
 .navBar a:hover, .navBar a:focus {
-  color: #e2c42b;
-  border-bottom: 2.5px solid #e2c42b;
+  color: #161616;
+  border-bottom: 2.5px solid #161616;
 }
 .navBar .logo {
   font-weight: bold;
@@ -565,6 +593,13 @@ section {
 .hamburgerMenu,
 .mobileNav {
   display: none;
+}
+
+.mobileNav {
+  background: linear-gradient(-45deg, #2ba5e2, #009CC4, #e2c42b, #009CC4, #2ba5e2);
+  background-size: 600%;
+  -webkit-animation: navGradient 30s ease infinite;
+          animation: navGradient 30s ease infinite;
 }
 
 .extendMenuDrop {
@@ -748,11 +783,14 @@ section {
 }
 .portfolio {
   text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e2c42b), color-stop(#2ba5e2), to(#d3d3d3));
+  background-image: linear-gradient(to bottom, #e2c42b, #2ba5e2, #d3d3d3);
 }
 .portfolio .underline {
   margin-bottom: 40px;
 }
 .portfolio .newPortfolioContainer {
+  padding: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: -webkit-box;
@@ -795,12 +833,24 @@ section {
 }
 .portfolio .projectSkills > * {
   display: inline-block;
-  border: 2px solid #161616;
-  color: #e2c42b;
-  background-color: #161616;
   padding: 5px;
   border-radius: 10px;
   margin: 5px 0;
+}
+.portfolio .project1Container .projectSkills > * {
+  border: 3px solid #161616;
+  color: #e2c42b;
+  background-color: #161616;
+}
+.portfolio .project2Container .projectSkills > * {
+  border: 3px solid #FFFFFF;
+  color: #FFFFFF;
+  background-color: #345231;
+}
+.portfolio .project3Container .projectSkills > * {
+  border: 3px solid #e2c42b;
+  color: #161616;
+  background-color: #d3d3d3;
 }
 .portfolio .projectImg {
   width: 25px;
@@ -817,14 +867,11 @@ section {
       -ms-flex-align: center;
           align-items: center;
 }
-.portfolio .project1Container {
-  padding: 10px;
-}
 .portfolio .buttonContainer {
   margin-top: 10px;
 }
 .portfolio .buttonContainer .anchorButtons {
-  border: 1px solid #2ba5e2;
+  border: 1px solid #161616;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -856,17 +903,14 @@ section {
     text-align: center;
   }
 }
-@media (max-width: 324px) {
-  .portfolio .project1Title {
+@media (max-width: 569px) {
+  .portfolio .project3Title {
     display: -webkit-box;
   }
 }
-@media (max-width: 645px) {
-  .portfolio .portfolioContainer {
-    width: calc(100% - 10px);
-  }
-  .portfolio .desktopDescription {
-    display: none;
+@media (max-width: 324px) {
+  .portfolio .project1Title {
+    display: -webkit-box;
   }
 }
 .contact {

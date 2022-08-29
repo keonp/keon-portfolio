@@ -1,5 +1,7 @@
 .navBar {
-    background-color: $accent;
+    background: linear-gradient(-45deg, $accent, $blue, $gold, $blue, $accent);
+    background-size: 600%;
+    animation: navGradient 30s ease infinite;
     height: 55px;
 
     display: flex;
@@ -28,8 +30,8 @@
 
         &:hover,
         &:focus {
-            color: $gold;
-            border-bottom: 2.5px solid $gold;
+            color: $black;
+            border-bottom: 2.5px solid $black;
         }
     }
 
@@ -51,6 +53,7 @@
     }
 
     .mobileMenu {
+
         li {
             padding: 20px 0 20px 5%;
         }
@@ -68,6 +71,12 @@
 .hamburgerMenu,
 .mobileNav {
     display: none;
+}
+
+.mobileNav{ 
+    background: linear-gradient(-45deg, $accent, $blue, $gold, $blue, $accent);
+    background-size: 600%;
+    animation: navGradient 30s ease infinite;
 }
 
 .extendMenuDrop {
