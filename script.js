@@ -16,34 +16,37 @@ const aboutMeList = [
 const subtext = document.querySelector('.subtext');
 console.log(subtext);
 
-app.aboutMeLoop = async () => {
-    let i = 0;
-    let j = 0;
-    let subtextContent = [];
-    let isDeleting = false;
+let i = 0;
+let j = 0;
+let subtextContent = [];
+let isDeleting = false;
 
-    subtext.textContent = subtextContent.join('');
+app.aboutMeLoop = () => {
 
     if (i < aboutMeList.length) {
+
+        // if (j === aboutMeList[i].length) {
+        //     isDeleting = true;
+        // }
 
         if (!isDeleting && j < aboutMeList[i].length) {
             subtextContent.push(aboutMeList[i][j]);
             j++;
-        }
-
+        }       
+        
         if (isDeleting && j <= aboutMeList[i].length) {
             subtextContent.pop();
             j--;
         }
 
-        if (j === aboutMeList[i].length) {
-            isDeleting = true;
-        }
+        subtext.textContent = subtextContent.join('');
+
+        setTimeout(app.aboutMeLoop, 100)
 
     }
-
-
 }
+
+// iterate over
 
 
 // A method to display the mobile menu
@@ -132,6 +135,7 @@ app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
+    // app.aboutMeLoop();
 }
 
 app.init();

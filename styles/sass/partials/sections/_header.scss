@@ -32,20 +32,67 @@
     }
 
     .subtextContainer {
-        position: relative;
+        // position: relative;
+        background-color: steelblue;
+
+        p {
+
+            font-family: $body-font;
+            font-weight: bold;
+        }
+        
     }
+
+    .aboutMeList {
+        background-color: steelblue;
+        height: 90px;
+        // width: 400px;
+        // display: flex;
+        // overflow: hidden;
+
+        > * {
+            // display: inline-block;
+            font-family: $body-font;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $white;
+            padding: 10px;
+        }
+    }
+
+    // transform: translateY(-100%)
+
+    // .aboutMeList {
+    //     background-color: steelblue;
+    //     height: 90px;
+    //     // overflow: hidden;
+
+    //     > * {
+    //         font-family: $body-font;
+    //         font-weight: bold;
+    //         text-transform: uppercase;
+    //         color: $white;
+
+    //         height: 90px;
+    //         // border: 1px solid black;
+
+    //         margin: 10% 0;
+    //         text-align: center;
+    //         // padding: 0 10px;
+    //     }
+    // }
     
     .subtext {
-        color: $white;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-align: center;
+        // color: $white;
+        // text-transform: uppercase;
+        // font-weight: bold;
+        // text-align: center;
 
         &::before {
             // transition: 0.2s;
             // content: 'Front-End Developer';
             // content: 'amateur jiu-jitsu practioner';
-            display: block;
+            // display: block;
             // white-space: nowrap;
             // overflow: hidden;
             // animation: swipeEffect 13s linear infinite;
@@ -53,12 +100,12 @@
         }
         
         &::after {
-            content: "|";
-            color: $accent;
-            font-size: 1.3rem;
-            position: absolute;
-            right: -4%;
-            top: -3%;
+            // content: "|";
+            // color: $accent;
+            // font-size: 1.3rem;
+            // position: absolute;
+            // right: -4%;
+            // top: -3%;
         }
     }
 }
@@ -72,15 +119,15 @@
     }
 }
 
-@media (max-width: 365px) {
-    .header {
+// @media (max-width: 365px) {
+//     .header {
 
-        .subtext {
-            font-size: 0.85rem;
+//         .subtext {
+//             font-size: 0.85rem;
 
-            &::after {
-                top: -8%;
-            }
-        }
-    }
-}
+//             &::after {
+//                 top: -8%;
+//             }
+//         }
+//     }
+// }

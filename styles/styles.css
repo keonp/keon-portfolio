@@ -478,37 +478,26 @@ section {
   border: 1px solid #161616;
 }
 .header .subtextContainer {
-  position: relative;
+  background-color: steelblue;
 }
-.header .subtext {
-  color: #FFFFFF;
-  text-transform: uppercase;
+.header .subtextContainer p {
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
-  text-align: center;
 }
-.header .subtext::before {
-  display: block;
+.header .aboutMeList {
+  background-color: steelblue;
+  height: 90px;
 }
-.header .subtext::after {
-  content: "|";
-  color: #2ba5e2;
-  font-size: 1.3rem;
-  position: absolute;
-  right: -4%;
-  top: -3%;
+.header .aboutMeList > * {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 10px;
 }
-
 @media (max-width: 645px) {
   .header h1 {
     font-size: 11.5vw;
-  }
-}
-@media (max-width: 365px) {
-  .header .subtext {
-    font-size: 0.85rem;
-  }
-  .header .subtext::after {
-    top: -8%;
   }
 }
 .navBar {
@@ -551,13 +540,11 @@ section {
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 .navBar a:hover, .navBar a:focus {
   color: #161616;
   border-bottom: 2.5px solid #161616;
-}
-.navBar .logo {
-  font-weight: bold;
 }
 .navBar .menuBar {
   width: 40px;
@@ -647,6 +634,10 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+.about {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#f2f2f2));
+  background-image: linear-gradient(to bottom, #FFFFFF, #f2f2f2);
 }
 .about .wrapper {
   display: -webkit-box;
@@ -836,14 +827,14 @@ section {
   background-color: #161616;
 }
 .portfolio .project2Container .projectSkills > * {
-  border: 3px solid #FFFFFF;
+  border: 3px solid #161616;
   color: #FFFFFF;
   background-color: #345231;
 }
 .portfolio .project3Container .projectSkills > * {
   border: 3px solid #e2c42b;
   color: #161616;
-  background-color: #d3d3d3;
+  background-color: #f2f2f2;
 }
 .portfolio .projectImg {
   width: 25px;

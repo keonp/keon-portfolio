@@ -1,4 +1,6 @@
 .about {
+    background-image: linear-gradient(to bottom, $white, $offWhite);
+    
     .wrapper {
         display: flex;
         justify-content: space-around;
