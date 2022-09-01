@@ -6,48 +6,6 @@ const navBarContainer = document.querySelector('.navBarContainer');
 const mobileNav = document.querySelector('.mobileNav');
 const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
 const menuBar = document.querySelectorAll('.menuBar');
-const aboutMeList = [
-    'amateur jiu-jitsu practioner',
-    'problem solver',
-    'technology enthusiast',
-    'front-end developer'
-];
-
-const subtext = document.querySelector('.subtext');
-console.log(subtext);
-
-let i = 0;
-let j = 0;
-let subtextContent = [];
-let isDeleting = false;
-
-app.aboutMeLoop = () => {
-
-    if (i < aboutMeList.length) {
-
-        // if (j === aboutMeList[i].length) {
-        //     isDeleting = true;
-        // }
-
-        if (!isDeleting && j < aboutMeList[i].length) {
-            subtextContent.push(aboutMeList[i][j]);
-            j++;
-        }       
-        
-        if (isDeleting && j <= aboutMeList[i].length) {
-            subtextContent.pop();
-            j--;
-        }
-
-        subtext.textContent = subtextContent.join('');
-
-        setTimeout(app.aboutMeLoop, 100)
-
-    }
-}
-
-// iterate over
-
 
 // A method to display the mobile menu
 app.displayMobileMenu = () => {
@@ -135,7 +93,6 @@ app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
-    // app.aboutMeLoop();
 }
 
 app.init();

@@ -32,7 +32,6 @@
     }
 
     .subtextContainer {
-        // background-color: steelblue;
         height: 90px;
         width: 400px;
         display: flex;
@@ -42,7 +41,6 @@
     }
 
     .aboutMeList {
-        // background-color: steelblue;
         width: 2500px;
         display: flex;
 
@@ -53,58 +51,7 @@
             color: $white;
             width: 400px;
             text-align: center;
-            animation: slide 10s infinite;
-        }
-    }
-
-
-    // transform: translateX(-101.3%)
-    // transform: translateX(-99.9%)
-
-    // .aboutMeList {
-    //     background-color: steelblue;
-    //     height: 90px;
-    //     // overflow: hidden;
-
-    //     > * {
-    //         font-family: $body-font;
-    //         font-weight: bold;
-    //         text-transform: uppercase;
-    //         color: $white;
-
-    //         height: 90px;
-    //         // border: 1px solid black;
-
-    //         margin: 10% 0;
-    //         text-align: center;
-    //         // padding: 0 10px;
-    //     }
-    // }
-    
-    .subtext {
-        // color: $white;
-        // text-transform: uppercase;
-        // font-weight: bold;
-        // text-align: center;
-
-        &::before {
-            // transition: 0.2s;
-            // content: 'Front-End Developer';
-            // content: 'amateur jiu-jitsu practioner';
-            // display: block;
-            // white-space: nowrap;
-            // overflow: hidden;
-            // animation: swipeEffect 13s linear infinite;
-            // animation: testSwipe 3s linear infinite;
-        }
-        
-        &::after {
-            // content: "|";
-            // color: $accent;
-            // font-size: 1.3rem;
-            // position: absolute;
-            // right: -4%;
-            // top: -3%;
+            animation: slide 9s infinite;
         }
     }
 }

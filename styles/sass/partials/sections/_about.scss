@@ -1,5 +1,6 @@
 .about {
-    background-image: linear-gradient(to bottom, $white, $offWhite);
+    // background-image: linear-gradient(to bottom, $white, $offWhite);
+    background-color: $white;
     
     .wrapper {
         display: flex;
