@@ -546,11 +546,10 @@ section {
   }
 }
 .navBar {
-  background: linear-gradient(-45deg, #2ba5e2, #009CC4, #e2c42b, #009CC4, #2ba5e2);
-  background-size: 600%;
-  -webkit-animation: navGradient 30s ease infinite;
-          animation: navGradient 30s ease infinite;
   height: 55px;
+  background-color: #FFFFFF;
+  border-top: 3px solid #2ba5e2;
+  border-bottom: 3px solid #2ba5e2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,7 +581,7 @@ section {
           justify-content: space-between;
 }
 .navBar a {
-  color: #FFFFFF;
+  color: #2ba5e2;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -595,7 +594,7 @@ section {
   width: 40px;
   height: 3.5px;
   display: block;
-  background-color: #FFFFFF;
+  background-color: #2ba5e2;
   margin: 4px auto;
   border-radius: 30px;
 }
@@ -621,10 +620,7 @@ section {
 }
 
 .mobileNav {
-  background: linear-gradient(-45deg, #2ba5e2, #009CC4, #e2c42b, #009CC4, #2ba5e2);
-  background-size: 600%;
-  -webkit-animation: navGradient 30s ease infinite;
-          animation: navGradient 30s ease infinite;
+  background-color: #FFFFFF;
 }
 
 .extendMenuDrop {
@@ -632,9 +628,10 @@ section {
 }
 
 .extendMenuDisplay {
+  border-bottom: 2px solid #2ba5e2;
   padding-top: 15px;
   display: block;
-  background-color: #2ba5e2;
+  background-color: #FFFFFF;
   position: absolute;
   width: 100%;
   left: 0;
@@ -655,7 +652,7 @@ section {
 }
 
 .extendMenuBorder {
-  border-bottom: 1.5px solid #FFFFFF;
+  border-bottom: 1.5px solid #2ba5e2;
   padding-bottom: 12px;
 }
 
@@ -811,14 +808,14 @@ section {
 }
 .portfolio {
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), color-stop(#e2c42b), color-stop(#2ba5e2), color-stop(#d3d3d3), to(#f2f2f2));
-  background-image: linear-gradient(to bottom, #f2f2f2, #e2c42b, #2ba5e2, #d3d3d3, #f2f2f2);
+  background-color: #FFFFFF;
 }
 .portfolio .underline {
   margin-bottom: 40px;
 }
 .portfolio .newPortfolioContainer {
-  padding: 10px;
+  padding: 30px;
+  margin-bottom: 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: -webkit-box;
@@ -826,7 +823,9 @@ section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 50px 0;
+  -webkit-box-shadow: 0 20px 60px #d3d3d3;
+          box-shadow: 0 20px 60px #d3d3d3;
 }
 .portfolio .newProjectImgContainer {
   width: 42.7%;

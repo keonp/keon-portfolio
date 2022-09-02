@@ -1,12 +1,13 @@
 .navBar {
-    background: linear-gradient(-45deg, $accent, $blue, $gold, $blue, $accent);
+    // background: linear-gradient(-45deg, $white, $white, rgba(255, 217, 0, 0.445), $white, $white);
     // background: linear-gradient(-45deg, $accent, $blue, $black, $blue, $accent);
-    background-size: 600%;
-    animation: navGradient 30s ease infinite;
+    // background-size: 600%;
+    // animation: navGradient 30s ease infinite;
     height: 55px;
+    background-color: $white;
 
-    // border-top: 3px solid $black;
-    // border-bottom: 3px solid $black;
+    border-top: 3px solid $accent;
+    border-bottom: 3px solid $accent;
     // box-shadow: 0px 5px 20px $offWhite;
 
     display: flex;
@@ -29,7 +30,7 @@
     }
     
     a {
-        color: $white;
+        color: $accent;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: bold;
@@ -45,7 +46,7 @@
         width: 40px;
         height: 3.5px;
         display: block;
-        background-color: $white;
+        background-color: $accent;
         margin: 4px auto;
         border-radius: 30px;
     }
@@ -55,7 +56,6 @@
     }
 
     .mobileMenu {
-
         li {
             padding: 20px 0 20px 5%;
         }
@@ -76,9 +76,10 @@
 }
 
 .mobileNav{ 
-    background: linear-gradient(-45deg, $accent, $blue, $gold, $blue, $accent);
-    background-size: 600%;
-    animation: navGradient 30s ease infinite;
+    // background: linear-gradient(-45deg, $white, $white, rgba(255, 217, 0, 0.445), $white, $white);
+    // background-size: 600%;
+    // animation: navGradient 30s ease infinite;
+    background-color: $white;
 }
 
 .extendMenuDrop {
@@ -86,9 +87,10 @@
 }
 
 .extendMenuDisplay {
+    border-bottom: 2px solid $accent;
     padding-top: 15px;
     display: block;
-    background-color: $accent;
+    background-color: $white;
     position: absolute;
     width: 100%;
     left: 0;
@@ -107,7 +109,7 @@
 }
 
 .extendMenuBorder {
-    border-bottom: 1.5px solid $white;
+    border-bottom: 1.5px solid $accent;
     padding-bottom: 12px;
 }
 
