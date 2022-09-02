@@ -3,11 +3,11 @@
     // background: linear-gradient(-45deg, $accent, $blue, $black, $blue, $accent);
     // background-size: 600%;
     // animation: navGradient 30s ease infinite;
-    height: 55px;
+    height: 7vh;
     background-color: $white;
 
-    border-top: 3px solid $accent;
-    border-bottom: 3px solid $accent;
+    // border-top: 3px solid $accent;
+    // border-bottom: 3px solid $accent;
     // box-shadow: 0px 5px 20px $offWhite;
 
     display: flex;
@@ -30,15 +30,16 @@
     }
     
     a {
-        color: $accent;
+        color: $black;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: bold;
+        transition: 0.3s;
 
         &:hover,
         &:focus {
-            color: $black;
-            border-bottom: 2.5px solid $black;
+            color: $accent;
+            // border-bottom: 2.5px solid $accent;
         }
     }
 
@@ -115,7 +116,7 @@
 
 @media (max-width: 645px) {
     .navBar {  
-        align-items: flex-start;
+        // align-items: flex-start;
         padding: 10.5px 0;
 
         .mainMenu {

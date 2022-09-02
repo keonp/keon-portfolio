@@ -256,7 +256,7 @@ p {
 }
 
 .button {
-  background-color: #2ba5e2;
+  background-color: #FC5703;
   padding: 10px 20px;
   text-align: center;
   border: none;
@@ -319,7 +319,7 @@ section {
 .underline {
   height: 2.5px;
   width: 110px;
-  background-color: #2ba5e2;
+  background-color: #FC5703;
   position: relative;
   margin: 10px auto 0;
 }
@@ -328,7 +328,7 @@ section {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #2ba5e2;
+  background-color: #FC5703;
   position: absolute;
   top: -140%;
 }
@@ -466,7 +466,7 @@ section {
   }
 }
 .header {
-  height: 100vh;
+  height: 93vh;
   background-image: url(../assets/header-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -495,8 +495,8 @@ section {
   -webkit-transition: 0.25s;
   transition: 0.25s;
   color: #FFFFFF;
-  background-color: #2ba5e2;
-  border: 1px solid #2ba5e2;
+  background-color: #FC5703;
+  border: 1px solid #FC5703;
 }
 .header .contactMe:hover, .header .contactMe:focus {
   color: #161616;
@@ -546,10 +546,8 @@ section {
   }
 }
 .navBar {
-  height: 55px;
+  height: 7vh;
   background-color: #FFFFFF;
-  border-top: 3px solid #2ba5e2;
-  border-bottom: 3px solid #2ba5e2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,20 +579,21 @@ section {
           justify-content: space-between;
 }
 .navBar a {
-  color: #2ba5e2;
+  color: #161616;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .navBar a:hover, .navBar a:focus {
-  color: #161616;
-  border-bottom: 2.5px solid #161616;
+  color: #FC5703;
 }
 .navBar .menuBar {
   width: 40px;
   height: 3.5px;
   display: block;
-  background-color: #2ba5e2;
+  background-color: #FC5703;
   margin: 4px auto;
   border-radius: 30px;
 }
@@ -628,7 +627,7 @@ section {
 }
 
 .extendMenuDisplay {
-  border-bottom: 2px solid #2ba5e2;
+  border-bottom: 2px solid #FC5703;
   padding-top: 15px;
   display: block;
   background-color: #FFFFFF;
@@ -652,15 +651,12 @@ section {
 }
 
 .extendMenuBorder {
-  border-bottom: 1.5px solid #2ba5e2;
+  border-bottom: 1.5px solid #FC5703;
   padding-bottom: 12px;
 }
 
 @media (max-width: 645px) {
   .navBar {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     padding: 10.5px 0;
   }
   .navBar .mainMenu {
@@ -678,7 +674,7 @@ section {
   }
 }
 .about {
-  background-color: #FFFFFF;
+  background-color: #f2f2f2;
 }
 .about .wrapper {
   display: -webkit-box;
@@ -691,13 +687,19 @@ section {
           align-items: center;
 }
 .about h2 {
-  border-bottom: 2px solid #2ba5e2;
+  border-bottom: 2px solid #FC5703;
   display: inline-block;
 }
 .about .profileImgContainer {
   width: 35%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+.about .profileImg {
+  border-radius: 50%;
+  border: 5px solid #FC5703;
+  -webkit-box-shadow: 0 0 0px 15px #333333;
+          box-shadow: 0 0 0px 15px #333333;
 }
 .about .profileImg img {
   border-radius: 50%;
@@ -739,7 +741,7 @@ section {
   }
 }
 .skills {
-  background-color: #f2f2f2;
+  background-color: #FFFFFF;
   text-align: center;
 }
 .skills .wrapper {
@@ -760,7 +762,7 @@ section {
 .skills .devIconContainer {
   width: calc(20% - 40px);
   margin: 40px 20px;
-  color: #2ba5e2;
+  color: #FC5703;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -988,7 +990,7 @@ section {
 }
 .contact .iconContainer i {
   font-size: 30px;
-  color: #2ba5e2;
+  color: #FC5703;
 }
 .contact .socialMedia ul {
   display: -webkit-box;
@@ -1000,7 +1002,7 @@ section {
   width: 50px;
 }
 .contact .socialMedia ul a {
-  color: #2ba5e2;
+  color: #FC5703;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -1047,7 +1049,7 @@ section {
 }
 .contact .button {
   display: block;
-  border: 1px solid #2ba5e2;
+  border: 1px solid #FC5703;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   cursor: pointer;
