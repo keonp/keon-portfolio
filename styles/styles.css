@@ -744,10 +744,20 @@ section {
   background-color: #FFFFFF;
   text-align: center;
 }
-.skills .wrapper {
+.skills .skillsWrapper {
   -webkit-box-shadow: 0px 20px 20px #d3d3d3;
           box-shadow: 0px 20px 20px #d3d3d3;
   padding: 30px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .skills .skillsIconGallery {
   display: -webkit-box;
@@ -758,23 +768,17 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 600px;
+  height: 600px;
+  border: 10px solid #333333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .skills .devIconContainer {
-  width: calc(20% - 40px);
-  margin: 40px 20px;
-  color: #FC5703;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.skills .devIconContainer > * {
-  font-size: 80px;
-}
-.skills .devIconContainer:hover {
-  color: #e2c42b;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-.skills .accessibility {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,26 +792,30 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 145px;
+  width: 145px;
+  background-color: #f2f2f2;
+  border: 5px solid #333333;
+  border-radius: 100%;
+  color: #FC5703;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -72.5px;
+}
+.skills .devIconContainer i,
+.skills .devIconContainer .material-symbols-outlined {
+  font-size: 50px;
+}
+.skills .devIconContainer:hover {
+  color: #161616;
 }
 .skills .skillName {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 645px) {
-  .skills .devIconContainer {
-    width: calc(33.3333333333% - 40px);
-  }
-}
-@media (max-width: 460px) {
-  .skills .devIconContainer {
-    width: calc(50% - 40px);
-  }
-}
-@media (max-width: 390px) {
-  .skills .devIconContainer {
-    width: calc(100% - 40px);
-  }
-}
 .portfolio {
   text-align: center;
   background-color: #FFFFFF;
@@ -1039,6 +1047,7 @@ section {
 .contact .inputs input {
   padding: 5px 4px;
   width: calc(50% - 10px);
+  height: width;
   border: none;
   border-bottom: 1px solid black;
 }
@@ -1076,6 +1085,7 @@ section {
   }
   .contact .contactGallery > * {
     width: calc(50% - 40px);
+    height: width;
   }
 }
 @media (max-width: 855px) {
@@ -1090,6 +1100,7 @@ section {
   }
   .contact .inputs input {
     width: calc(100% - 0px);
+    height: width;
   }
   .contact .inputs input:nth-child(2) {
     margin-bottom: 35px;
@@ -1101,6 +1112,7 @@ section {
 @media (max-width: 645px) {
   .contact .contactGallery > * {
     width: calc(100% - 40px);
+    height: width;
   }
 }
 .footer {

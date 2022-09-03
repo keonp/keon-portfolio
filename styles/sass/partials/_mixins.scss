@@ -1,5 +1,6 @@
 @mixin containerWidth($columns, $pixels) {
     width: calc((100% / $columns) - $pixels);
+    height: width;
 }
 
 @mixin contactGalleryWidth($min-width, $height) {

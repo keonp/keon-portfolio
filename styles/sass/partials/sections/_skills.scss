@@ -1,65 +1,103 @@
 .skills {
     background-color: $white;
     text-align: center;
+    
 
-    .wrapper {
+    .skillsWrapper {
         box-shadow: 0px 20px 20px $lightgray;
         padding: 30px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .skillsIconGallery {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        width: $diameter;
+        height: $diameter;
+        border: 10px solid $grey;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // margin-top: 100px;
+
+        // background-color: $accent;
     }
 
     .devIconContainer {
-        @include containerWidth(5, 40px);
-        margin: 40px 20px;
-        color: $accent;
-        transition: 0.3s;
-        > * {
-            font-size: 80px;
-        }
-
-        &:hover {
-            color: $gold;
-            transform: translateY(-10px);
-        }
-    }
-
-    .accessibility {
+        // @include containerWidth(5, 40px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        // margin: 40px 20px;
+        height: $devDiameter;
+        width: $devDiameter;
+        // background-color: $grey;
+        background-color: $offWhite;
+        border: 5px solid $grey;
+        // padding: 5px;
+        border-radius: 100%;
+
+        color: $accent;
+        transition: 0.5s;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -($devDiameter / 2);
+
+        i,
+        .material-symbols-outlined {
+            font-size: 50px;
+        }
+
+        &:hover {
+            color: $black;
+            // transform: translateY(-10px);
+        }
     }
+
+    // .accessibility {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
 
     .skillName {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
-@media (max-width: 645px) {
-    .skills {
-        .devIconContainer  {
-            @include containerWidth(3, 40px);
-        }
-    }
-}
+// @media (max-width: 645px) {
+//     .skills {
+//         .devIconContainer  {
+//             // @include containerWidth(3, 40px);
+//         }
+//     }
+// }
 
-@media (max-width: 460px) {
-    .skills {
-        .devIconContainer  {
-            @include containerWidth(2, 40px);
-        }
-    }
-}
+// @media (max-width: 460px) {
+//     .skills {
+//         .devIconContainer  {
+//             // @include containerWidth(2, 40px);
+//         }
+//     }
+// }
 
-@media (max-width: 390px) {
-    .skills {
-        .devIconContainer  {
-            @include containerWidth(1, 40px);
-        }
-    }
-}
+// @media (max-width: 390px) {
+//     .skills {
+//         .devIconContainer  {
+//             // @include containerWidth(1, 40px);
+//         }
+//     }
+// }

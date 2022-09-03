@@ -6,6 +6,8 @@ const navBarContainer = document.querySelector('.navBarContainer');
 const mobileNav = document.querySelector('.mobileNav');
 const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
 const menuBar = document.querySelectorAll('.menuBar');
+const skills = document.querySelectorAll('.devIconContainer');
+const test = document.querySelector('.test');
 
 // A method to display the mobile menu
 app.displayMobileMenu = () => {
@@ -87,12 +89,28 @@ app.fadeIn = () => {
     }
 }
 
+// function to display skills in a circular design
+app.displaySkills = () => {
+    const diameter = 600;
+    const angle = 36;
 
+    skills.forEach((element, index) => {
+        element.style.transform = `rotate(${index * angle}deg) translate(${diameter / 2}px) rotate(-${index * angle}deg)`;
+    })
+}
+
+// app.clickTest = () => {
+//     test.addEventListener('click', () => {
+//         app.displaySkills();
+//     })
+// }
 
 app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
+    app.displaySkills();
+    // app.clickTest();
 }
 
 app.init();
