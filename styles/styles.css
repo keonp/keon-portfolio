@@ -421,28 +421,6 @@ section {
             transform: translateX(-399.9%);
   }
 }
-@-webkit-keyframes testSwipe {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 50%;
-  }
-  100% {
-    width: 0%;
-  }
-}
-@keyframes testSwipe {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 50%;
-  }
-  100% {
-    width: 0%;
-  }
-}
 @-webkit-keyframes navGradient {
   0% {
     background-position: 0% 50%;
@@ -674,7 +652,7 @@ section {
   }
 }
 .about {
-  background-color: #f2f2f2;
+  background-color: #FFFFFF;
 }
 .about .wrapper {
   display: -webkit-box;
@@ -741,14 +719,14 @@ section {
   }
 }
 .skills {
-  background-color: #FFFFFF;
+  background-color: #f2f2f2;
   text-align: center;
 }
 .skills .skillsWrapper {
   -webkit-box-shadow: 0px 20px 20px #d3d3d3;
           box-shadow: 0px 20px 20px #d3d3d3;
   padding: 30px;
-  height: 100vh;
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,6 +746,9 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 600px;
   height: 600px;
   border: 10px solid #333333;
@@ -777,6 +758,24 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  background-color: #BA4102;
+}
+.skills .skillsIconGallery::after {
+  content: "";
+  position: relative;
+  height: 20%;
+  width: 20%;
+  background-color: #FC5703;
+  border: 1px solid #FC5703;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 100px #D84B02;
+          box-shadow: 0 0 0 100px #D84B02;
+  background-image: url("../assets/arrows-up-down-left-right-solid2.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .skills .devIconContainer {
   display: -webkit-box;
@@ -794,7 +793,7 @@ section {
           align-items: center;
   height: 145px;
   width: 145px;
-  background-color: #f2f2f2;
+  background-color: #FFFFFF;
   border: 5px solid #333333;
   border-radius: 100%;
   color: #FC5703;
@@ -808,9 +807,17 @@ section {
 .skills .devIconContainer i,
 .skills .devIconContainer .material-symbols-outlined {
   font-size: 50px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
-.skills .devIconContainer:hover {
-  color: #161616;
+.skills .devIconContainer > * {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.skills .devIconContainer:hover > * {
+  color: #333333;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 .skills .skillName {
   font-size: 0.9rem;
@@ -908,14 +915,14 @@ section {
   margin-top: 10px;
 }
 .portfolio .buttonContainer .anchorButtons {
-  border: 1px solid #161616;
+  border: 3px solid #161616;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 .portfolio .buttonContainer .anchorButtons:hover, .portfolio .buttonContainer .anchorButtons:focus {
   color: #161616;
   background-color: #FFFFFF;
-  border: 1px solid #161616;
+  border: 3px solid #161616;
 }
 
 @media (max-width: 935px) {

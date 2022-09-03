@@ -95,7 +95,7 @@ app.displaySkills = () => {
     const angle = 36;
 
     skills.forEach((element, index) => {
-        element.style.transform = `rotate(${index * angle}deg) translate(${diameter / 2}px) rotate(-${index * angle}deg)`;
+        element.style.transform = `rotate(${index * angle + 252}deg) translate(${diameter / 2}px) rotate(-${index * angle + 252}deg)`;
     })
 }
 
