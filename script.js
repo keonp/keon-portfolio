@@ -95,7 +95,8 @@ app.displaySkills = () => {
     const angle = 36;
 
     skills.forEach((element, index) => {
-        element.style.transform = `rotate(${index * angle + 252}deg) translate(${diameter / 2}px) rotate(-${index * angle + 252}deg)`;
+        const rotation = index * angle + 252;
+        element.style.transform = `rotate(${rotation}deg) translate(${diameter / 2}px) rotate(-${rotation}deg)`;
     })
 }
 
@@ -109,7 +110,7 @@ app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
-    app.displaySkills();
+    // app.displaySkills();
     // app.clickTest();
 }
 

@@ -421,6 +421,8 @@ section {
             transform: translateX(-399.9%);
   }
 }
+@-webkit-keyframes wheelSpin {}
+@keyframes wheelSpin {}
 @-webkit-keyframes navGradient {
   0% {
     background-position: 0% 50%;
@@ -819,8 +821,48 @@ section {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
 }
+.skills .devIconContainer:nth-child(1) {
+  -webkit-transform: rotate(288) deg translate(300px) rotate(-288) deg;
+          transform: rotate(288) deg translate(300px) rotate(-288) deg;
+}
+.skills .devIconContainer:nth-child(2) {
+  -webkit-transform: rotate(324) deg translate(300px) rotate(-324) deg;
+          transform: rotate(324) deg translate(300px) rotate(-324) deg;
+}
+.skills .devIconContainer:nth-child(3) {
+  -webkit-transform: rotate(360) deg translate(300px) rotate(-360) deg;
+          transform: rotate(360) deg translate(300px) rotate(-360) deg;
+}
+.skills .devIconContainer:nth-child(4) {
+  -webkit-transform: rotate(396) deg translate(300px) rotate(-396) deg;
+          transform: rotate(396) deg translate(300px) rotate(-396) deg;
+}
+.skills .devIconContainer:nth-child(5) {
+  -webkit-transform: rotate(432) deg translate(300px) rotate(-432) deg;
+          transform: rotate(432) deg translate(300px) rotate(-432) deg;
+}
+.skills .devIconContainer:nth-child(6) {
+  -webkit-transform: rotate(468) deg translate(300px) rotate(-468) deg;
+          transform: rotate(468) deg translate(300px) rotate(-468) deg;
+}
+.skills .devIconContainer:nth-child(7) {
+  -webkit-transform: rotate(504) deg translate(300px) rotate(-504) deg;
+          transform: rotate(504) deg translate(300px) rotate(-504) deg;
+}
+.skills .devIconContainer:nth-child(8) {
+  -webkit-transform: rotate(540) deg translate(300px) rotate(-540) deg;
+          transform: rotate(540) deg translate(300px) rotate(-540) deg;
+}
+.skills .devIconContainer:nth-child(9) {
+  -webkit-transform: rotate(576) deg translate(300px) rotate(-576) deg;
+          transform: rotate(576) deg translate(300px) rotate(-576) deg;
+}
+.skills .devIconContainer:nth-child(10) {
+  -webkit-transform: rotate(612) deg translate(300px) rotate(-612) deg;
+          transform: rotate(612) deg translate(300px) rotate(-612) deg;
+}
 .skills .skillName {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .portfolio {
