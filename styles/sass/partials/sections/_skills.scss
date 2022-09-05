@@ -70,7 +70,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: -($devDiameter / 2);
+        margin: -($devRadius);
 
         i,
         .material-symbols-outlined {
@@ -93,8 +93,8 @@
 
     @for $i from 1 through 10 {
         .devIconContainer:nth-child(#{$i}) {
-            // transform: rotate(0deg) translate($diameter / 2) rotate(-0deg)
-            @include position($i, $angle, $diameter);
+            @include position($i, $angle, $radius);
+            // @include wheelSpin($i, $angle, $diameter);
         }
     }
     // .accessibility {

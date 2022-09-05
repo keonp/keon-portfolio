@@ -16,13 +16,10 @@ $paragraph-font: 'Raleway', sans-serif;
 
 // dev icon container values
 $diameter: 600px;
+$radius: math.div($diameter, 2);
 $devDiameter: 145px;
-// $rotation:
+$devRadius: math.div($devDiameter, 2);
 $angle: 36;
-@mixin position($index, $angle, $diameter) {
-    $rotation: $index * $angle + 252;
-    transform: rotate($rotation)deg translate($diameter / 2) rotate(-($rotation))deg;
-}
 
 // Skills colour selection
 $ring1: #D84B02;

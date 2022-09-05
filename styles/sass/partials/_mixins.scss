@@ -42,13 +42,60 @@
     } 
 }
 
-@keyframes wheelSpin {
-
-}
-
-
 @keyframes navGradient {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
+
+@mixin position($index, $angle, $radius) {
+    $rotation: $index * $angle + 252;
+    // $rotation: $index / 10 * 0.7;
+
+    // transform: rotate(($rotation) *  1turn) translate($radius) rotate(-($rotation) * 1turn);
+
+    transform: rotate(($rotation) *  1deg) translate($radius) rotate(-($rotation) * 1deg);
+}
+
+
+    // @keyframes spin {
+    //     10% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     20% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     30% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     40% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     50% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     60% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     70% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     80% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     90% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }
+        
+    //     100% {
+    //         transform: rotate(($rotation + 36) * 1deg) rotate(-($rotation + 36) * 1deg);
+    //     }  
+    // }

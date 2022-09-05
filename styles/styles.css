@@ -421,8 +421,6 @@ section {
             transform: translateX(-399.9%);
   }
 }
-@-webkit-keyframes wheelSpin {}
-@keyframes wheelSpin {}
 @-webkit-keyframes navGradient {
   0% {
     background-position: 0% 50%;
@@ -822,44 +820,44 @@ section {
           transform: translateY(-10px);
 }
 .skills .devIconContainer:nth-child(1) {
-  -webkit-transform: rotate(288) deg translate(300px) rotate(-288) deg;
-          transform: rotate(288) deg translate(300px) rotate(-288) deg;
+  -webkit-transform: rotate(288deg) translate(300px) rotate(-288deg);
+          transform: rotate(288deg) translate(300px) rotate(-288deg);
 }
 .skills .devIconContainer:nth-child(2) {
-  -webkit-transform: rotate(324) deg translate(300px) rotate(-324) deg;
-          transform: rotate(324) deg translate(300px) rotate(-324) deg;
+  -webkit-transform: rotate(324deg) translate(300px) rotate(-324deg);
+          transform: rotate(324deg) translate(300px) rotate(-324deg);
 }
 .skills .devIconContainer:nth-child(3) {
-  -webkit-transform: rotate(360) deg translate(300px) rotate(-360) deg;
-          transform: rotate(360) deg translate(300px) rotate(-360) deg;
+  -webkit-transform: rotate(360deg) translate(300px) rotate(-360deg);
+          transform: rotate(360deg) translate(300px) rotate(-360deg);
 }
 .skills .devIconContainer:nth-child(4) {
-  -webkit-transform: rotate(396) deg translate(300px) rotate(-396) deg;
-          transform: rotate(396) deg translate(300px) rotate(-396) deg;
+  -webkit-transform: rotate(396deg) translate(300px) rotate(-396deg);
+          transform: rotate(396deg) translate(300px) rotate(-396deg);
 }
 .skills .devIconContainer:nth-child(5) {
-  -webkit-transform: rotate(432) deg translate(300px) rotate(-432) deg;
-          transform: rotate(432) deg translate(300px) rotate(-432) deg;
+  -webkit-transform: rotate(432deg) translate(300px) rotate(-432deg);
+          transform: rotate(432deg) translate(300px) rotate(-432deg);
 }
 .skills .devIconContainer:nth-child(6) {
-  -webkit-transform: rotate(468) deg translate(300px) rotate(-468) deg;
-          transform: rotate(468) deg translate(300px) rotate(-468) deg;
+  -webkit-transform: rotate(468deg) translate(300px) rotate(-468deg);
+          transform: rotate(468deg) translate(300px) rotate(-468deg);
 }
 .skills .devIconContainer:nth-child(7) {
-  -webkit-transform: rotate(504) deg translate(300px) rotate(-504) deg;
-          transform: rotate(504) deg translate(300px) rotate(-504) deg;
+  -webkit-transform: rotate(504deg) translate(300px) rotate(-504deg);
+          transform: rotate(504deg) translate(300px) rotate(-504deg);
 }
 .skills .devIconContainer:nth-child(8) {
-  -webkit-transform: rotate(540) deg translate(300px) rotate(-540) deg;
-          transform: rotate(540) deg translate(300px) rotate(-540) deg;
+  -webkit-transform: rotate(540deg) translate(300px) rotate(-540deg);
+          transform: rotate(540deg) translate(300px) rotate(-540deg);
 }
 .skills .devIconContainer:nth-child(9) {
-  -webkit-transform: rotate(576) deg translate(300px) rotate(-576) deg;
-          transform: rotate(576) deg translate(300px) rotate(-576) deg;
+  -webkit-transform: rotate(576deg) translate(300px) rotate(-576deg);
+          transform: rotate(576deg) translate(300px) rotate(-576deg);
 }
 .skills .devIconContainer:nth-child(10) {
-  -webkit-transform: rotate(612) deg translate(300px) rotate(-612) deg;
-          transform: rotate(612) deg translate(300px) rotate(-612) deg;
+  -webkit-transform: rotate(612deg) translate(300px) rotate(-612deg);
+          transform: rotate(612deg) translate(300px) rotate(-612deg);
 }
 .skills .skillName {
   font-size: 0.8rem;
