@@ -820,44 +820,506 @@ section {
           transform: translateY(-10px);
 }
 .skills .devIconContainer:nth-child(1) {
-  -webkit-transform: rotate(288deg) translate(300px) rotate(-288deg);
-          transform: rotate(288deg) translate(300px) rotate(-288deg);
+  -webkit-transform: rotate(0.7turn) translate(300px) rotate(-0.7turn);
+          transform: rotate(0.7turn) translate(300px) rotate(-0.7turn);
+}
+@-webkit-keyframes spin {
+  10% {
+    -webkit-transform: rotate(0.8turn) translate(300px) rotate(-0.8turn);
+            transform: rotate(0.8turn) translate(300px) rotate(-0.8turn);
+  }
+  20% {
+    -webkit-transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+            transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+  }
+  30% {
+    -webkit-transform: rotate(1turn) translate(300px) rotate(-1turn);
+            transform: rotate(1turn) translate(300px) rotate(-1turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+            transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+            transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+            transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+  }
+  70% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  80% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  90% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  100% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(0.8turn) translate(300px) rotate(-0.8turn);
+            transform: rotate(0.8turn) translate(300px) rotate(-0.8turn);
+  }
+  20% {
+    -webkit-transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+            transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+  }
+  30% {
+    -webkit-transform: rotate(1turn) translate(300px) rotate(-1turn);
+            transform: rotate(1turn) translate(300px) rotate(-1turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+            transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+            transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+            transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+  }
+  70% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  80% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  90% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  100% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
 }
 .skills .devIconContainer:nth-child(2) {
-  -webkit-transform: rotate(324deg) translate(300px) rotate(-324deg);
-          transform: rotate(324deg) translate(300px) rotate(-324deg);
+  -webkit-transform: rotate(0.8turn) translate(300px) rotate(-0.8turn);
+          transform: rotate(0.8turn) translate(300px) rotate(-0.8turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+            transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+  }
+  20% {
+    -webkit-transform: rotate(1turn) translate(300px) rotate(-1turn);
+            transform: rotate(1turn) translate(300px) rotate(-1turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+            transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+            transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+            transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  70% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  80% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  90% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  100% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
 }
 .skills .devIconContainer:nth-child(3) {
-  -webkit-transform: rotate(360deg) translate(300px) rotate(-360deg);
-          transform: rotate(360deg) translate(300px) rotate(-360deg);
+  -webkit-transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+          transform: rotate(0.9turn) translate(300px) rotate(-0.9turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1turn) translate(300px) rotate(-1turn);
+            transform: rotate(1turn) translate(300px) rotate(-1turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+            transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+            transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+            transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  70% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  80% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  90% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  100% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
 }
 .skills .devIconContainer:nth-child(4) {
-  -webkit-transform: rotate(396deg) translate(300px) rotate(-396deg);
-          transform: rotate(396deg) translate(300px) rotate(-396deg);
+  -webkit-transform: rotate(1turn) translate(300px) rotate(-1turn);
+          transform: rotate(1turn) translate(300px) rotate(-1turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+            transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+            transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+            transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  70% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  80% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  90% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
+  100% {
+    -webkit-transform: rotate(2turn) translate(300px) rotate(-2turn);
+            transform: rotate(2turn) translate(300px) rotate(-2turn);
+  }
 }
 .skills .devIconContainer:nth-child(5) {
-  -webkit-transform: rotate(432deg) translate(300px) rotate(-432deg);
-          transform: rotate(432deg) translate(300px) rotate(-432deg);
+  -webkit-transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+          transform: rotate(1.1turn) translate(300px) rotate(-1.1turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+            transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+            transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  70% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  80% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
+  90% {
+    -webkit-transform: rotate(2turn) translate(300px) rotate(-2turn);
+            transform: rotate(2turn) translate(300px) rotate(-2turn);
+  }
+  100% {
+    -webkit-transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+            transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+  }
 }
 .skills .devIconContainer:nth-child(6) {
-  -webkit-transform: rotate(468deg) translate(300px) rotate(-468deg);
-          transform: rotate(468deg) translate(300px) rotate(-468deg);
+  -webkit-transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+          transform: rotate(1.2turn) translate(300px) rotate(-1.2turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+            transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  70% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
+  80% {
+    -webkit-transform: rotate(2turn) translate(300px) rotate(-2turn);
+            transform: rotate(2turn) translate(300px) rotate(-2turn);
+  }
+  90% {
+    -webkit-transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+            transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+  }
+  100% {
+    -webkit-transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+            transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+  }
 }
 .skills .devIconContainer:nth-child(7) {
-  -webkit-transform: rotate(504deg) translate(300px) rotate(-504deg);
-          transform: rotate(504deg) translate(300px) rotate(-504deg);
+  -webkit-transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+          transform: rotate(1.3turn) translate(300px) rotate(-1.3turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+            transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  60% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
+  70% {
+    -webkit-transform: rotate(2turn) translate(300px) rotate(-2turn);
+            transform: rotate(2turn) translate(300px) rotate(-2turn);
+  }
+  80% {
+    -webkit-transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+            transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+  }
+  90% {
+    -webkit-transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+            transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+  }
+  100% {
+    -webkit-transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+            transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+  }
 }
 .skills .devIconContainer:nth-child(8) {
-  -webkit-transform: rotate(540deg) translate(300px) rotate(-540deg);
-          transform: rotate(540deg) translate(300px) rotate(-540deg);
+  -webkit-transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+          transform: rotate(1.4turn) translate(300px) rotate(-1.4turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+            transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  50% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
+  60% {
+    -webkit-transform: rotate(2turn) translate(300px) rotate(-2turn);
+            transform: rotate(2turn) translate(300px) rotate(-2turn);
+  }
+  70% {
+    -webkit-transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+            transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+  }
+  80% {
+    -webkit-transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+            transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+  }
+  90% {
+    -webkit-transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+            transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+  }
+  100% {
+    -webkit-transform: rotate(2.4turn) translate(300px) rotate(-2.4turn);
+            transform: rotate(2.4turn) translate(300px) rotate(-2.4turn);
+  }
 }
 .skills .devIconContainer:nth-child(9) {
-  -webkit-transform: rotate(576deg) translate(300px) rotate(-576deg);
-          transform: rotate(576deg) translate(300px) rotate(-576deg);
+  -webkit-transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+          transform: rotate(1.5turn) translate(300px) rotate(-1.5turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+            transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  40% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
+  50% {
+    -webkit-transform: rotate(2turn) translate(300px) rotate(-2turn);
+            transform: rotate(2turn) translate(300px) rotate(-2turn);
+  }
+  60% {
+    -webkit-transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+            transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+  }
+  70% {
+    -webkit-transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+            transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+  }
+  80% {
+    -webkit-transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+            transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+  }
+  90% {
+    -webkit-transform: rotate(2.4turn) translate(300px) rotate(-2.4turn);
+            transform: rotate(2.4turn) translate(300px) rotate(-2.4turn);
+  }
+  100% {
+    -webkit-transform: rotate(2.5turn) translate(300px) rotate(-2.5turn);
+            transform: rotate(2.5turn) translate(300px) rotate(-2.5turn);
+  }
 }
 .skills .devIconContainer:nth-child(10) {
-  -webkit-transform: rotate(612deg) translate(300px) rotate(-612deg);
-          transform: rotate(612deg) translate(300px) rotate(-612deg);
+  -webkit-transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+          transform: rotate(1.6turn) translate(300px) rotate(-1.6turn);
+}
+@keyframes spin {
+  10% {
+    -webkit-transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+            transform: rotate(1.7turn) translate(300px) rotate(-1.7turn);
+  }
+  20% {
+    -webkit-transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+            transform: rotate(1.8turn) translate(300px) rotate(-1.8turn);
+  }
+  30% {
+    -webkit-transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+            transform: rotate(1.9turn) translate(300px) rotate(-1.9turn);
+  }
+  40% {
+    -webkit-transform: rotate(2turn) translate(300px) rotate(-2turn);
+            transform: rotate(2turn) translate(300px) rotate(-2turn);
+  }
+  50% {
+    -webkit-transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+            transform: rotate(2.1turn) translate(300px) rotate(-2.1turn);
+  }
+  60% {
+    -webkit-transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+            transform: rotate(2.2turn) translate(300px) rotate(-2.2turn);
+  }
+  70% {
+    -webkit-transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+            transform: rotate(2.3turn) translate(300px) rotate(-2.3turn);
+  }
+  80% {
+    -webkit-transform: rotate(2.4turn) translate(300px) rotate(-2.4turn);
+            transform: rotate(2.4turn) translate(300px) rotate(-2.4turn);
+  }
+  90% {
+    -webkit-transform: rotate(2.5turn) translate(300px) rotate(-2.5turn);
+            transform: rotate(2.5turn) translate(300px) rotate(-2.5turn);
+  }
+  100% {
+    -webkit-transform: rotate(2.6turn) translate(300px) rotate(-2.6turn);
+            transform: rotate(2.6turn) translate(300px) rotate(-2.6turn);
+  }
 }
 .skills .skillName {
   font-size: 0.8rem;
