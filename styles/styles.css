@@ -1874,20 +1874,25 @@ section {
   border-radius: 10px;
   margin: 5px 0;
 }
+.portfolio .project0Container .projectSkills > * {
+  border: 3px solid #161616;
+  color: #161616;
+  background-color: #2ba5e2;
+}
 .portfolio .project1Container .projectSkills > * {
   border: 3px solid #161616;
   color: #e2c42b;
   background-color: #161616;
 }
-.portfolio .project3Container .projectSkills > * {
-  border: 3px solid #161616;
-  color: #FFFFFF;
-  background-color: #345231;
-}
 .portfolio .project2Container .projectSkills > * {
   border: 3px solid #e2c42b;
   color: #161616;
   background-color: #f2f2f2;
+}
+.portfolio .project3Container .projectSkills > * {
+  border: 3px solid #161616;
+  color: #FFFFFF;
+  background-color: #345231;
 }
 .portfolio .projectIcon {
   width: 25px;

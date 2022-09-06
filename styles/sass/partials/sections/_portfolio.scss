@@ -2,11 +2,6 @@
     text-align: center;
     background-color: $white;
 
-    .portfolioGallery {
-        // box-shadow: 0px 20px 20px $lightgray;
-        // padding: 30px;
-    }
-
     .underline {
         margin-bottom: 40px;
     }
@@ -21,19 +16,6 @@
         box-shadow: 0 20px 60px #d3d3d3;
         
     }
-
-    // .portfolioGallery .newPortfolioContainer:not(:last-child){
-    //     // border-bottom: 2px solid black;
-    //     box-shadow: 0 20px 20px $grey;
-    //     // border-width: 3px;
-    //     // border-style: solid;
-    //     // border-image: 
-    //     // linear-gradient(
-    //     //   to bottom, 
-    //     //   red, 
-    //     //   rgba(0, 0, 0, 0)
-    //     // ) 1 100%;
-    // }
 
     .projectImgContainer {
         width: 42.7%;
@@ -62,32 +44,34 @@
         }
     }
 
-    .project1Container {
+    .project0Container {
         .projectSkills {
             > * {
-                border: 3px solid $black;
-                color: $gold;
-                background-color: $black;
-            }
-        }
-    }
-    
-    .project3Container {
-        .projectSkills {
-            > * {
-                border: 3px solid $black;
-                color: $white;
-                background-color: $green;
+                @include projectSkillsStyles($black, $black, $ocean);
             }
         }
     }
 
+    .project1Container {
+        .projectSkills {
+            > * {
+                @include projectSkillsStyles($black, $gold, $black);
+            }
+        }
+    }
+    
     .project2Container {
         .projectSkills {
             > * {
-                border: 3px solid $gold;
-                color: $black;
-                background-color: $offWhite;
+                @include projectSkillsStyles($gold, $black, $offWhite);
+            }
+        }
+    }
+
+    .project3Container {
+        .projectSkills {
+            > * {
+                @include projectSkillsStyles($black, $white, $green);
             }
         }
     }

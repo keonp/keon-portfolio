@@ -7,6 +7,13 @@
     height: $height;
 }
 
+@mixin projectSkillsStyles($borderColour, $mainColour, $backgroundColour) {
+    border: 3px solid $borderColour;
+    color: $mainColour;
+    background-color: $backgroundColour;
+
+}
+
 @keyframes slide {
     10% {
         transform: translateX(-103.9%);
