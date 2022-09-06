@@ -56,7 +56,7 @@
 
     @include spinWheel($rotation, $radius, $index);
     animation: spin#{$index} 20s linear infinite;
-    
+
 }
 
 @mixin spinWheel ($rotation, $radius, $index) {
@@ -145,47 +145,3 @@
         transform: translate(-50%, -50%) rotate(1turn);
     }
 }
-
-// @mixin spinWheel ($rotation, $radius) {
-//     @keyframes spin {
-//         10% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.1) * 1turn);
-//         }
-        
-//         20% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.2) * 1turn);
-//         }
-        
-//         30% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.3) * 1turn);
-//         }
-        
-//         40% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.4) * 1turn);
-//         }
-        
-//         50% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.5) * 1turn);
-//         }
-        
-//         60% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.6) * 1turn);
-//         }
-        
-//         70% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.7) * 1turn);
-//         }
-        
-//         80% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.8) * 1turn);
-//         }
-        
-//         90% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 0.9) * 1turn);
-//         }
-        
-//         100% {
-//             transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation + 1) * 1turn);
-//         }  
-//     }
-// }

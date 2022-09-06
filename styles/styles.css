@@ -817,6 +817,15 @@ section {
   min-height: 100vh;
   height: 672.5px;
   margin: 72.5px, 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .skills .skillsIconGallery {
   display: -webkit-box;
@@ -1808,6 +1817,89 @@ section {
   font-size: 0.8rem;
 }
 
+@media (max-width: 835px) {
+  .skills .skillsWrapper {
+    min-height: unset;
+    height: unset;
+  }
+  .skills .devIconContainer:nth-child(1) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(2) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(3) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(4) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(5) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(6) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(7) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(8) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(9) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .devIconContainer:nth-child(10) {
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .skills .skillsIconGallery {
+    position: static;
+    -webkit-transform: unset;
+            transform: unset;
+    width: unset;
+    height: unset;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .skills .skillsIconGallery::after {
+    display: none;
+  }
+  .skills .devIconContainer {
+    margin: unset;
+    position: static;
+  }
+}
 .portfolio {
   text-align: center;
   background-color: #FFFFFF;

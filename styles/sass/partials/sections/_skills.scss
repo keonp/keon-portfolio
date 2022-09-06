@@ -11,9 +11,9 @@
         min-height: 100vh;
         height: calc(($diameter + math.div($devDiameter, 2)));
         margin: 72.5px, 0;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .skillsIconGallery {
@@ -110,6 +110,47 @@
 
     .skillName {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 835px) {
+
+    
+    .skills {
+
+        .skillsWrapper {
+            min-height: unset;
+            height: unset;
+        }
+
+        @for $i from 1 through 10 {
+            .devIconContainer:nth-child(#{$i}) {
+                transform: unset;
+                animation: none;
+            }
+        }
+
+        .skillsIconGallery{
+            position: static;
+            transform: unset;
+            width: unset;
+            height: unset;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+        }
+
+        .skillsIconGallery::after {
+            display: none;
+        }
+
+        .devIconContainer  {
+            margin: unset;
+            position: static;
+            // animation: none;
+            // animation-fill-mode: forwards;
+            // @include containerWidth(3, 40px);
+        }
     }
 }
 
