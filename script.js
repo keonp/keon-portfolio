@@ -6,6 +6,8 @@ const navBarContainer = document.querySelector('.navBarContainer');
 const mobileNav = document.querySelector('.mobileNav');
 const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
 const menuBar = document.querySelectorAll('.menuBar');
+const skills = document.querySelectorAll('.devIconContainer');
+const test = document.querySelector('.test');
 
 // A method to display the mobile menu
 app.displayMobileMenu = () => {
@@ -86,8 +88,6 @@ app.fadeIn = () => {
         })
     }
 }
-
-
 
 app.init = () => {
     app.displayMobileMenu();

@@ -1,65 +1,142 @@
 .skills {
     background-color: $offWhite;
     text-align: center;
+     h2 {
+        padding-bottom: 50px;
+     }
 
-    .wrapper {
+    .skillsWrapper {
         box-shadow: 0px 20px 20px $lightgray;
-        padding: 30px;
+        height: calc(($diameter + $devDiameter) * 1.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .skillsIconGallery {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
+        align-items: center;
 
-    .devIconContainer {
-        @include containerWidth(5, 40px);
-        margin: 40px 20px;
-        color: $accent;
-        transition: 0.3s;
-        > * {
-            font-size: 80px;
+        width: $diameter;
+        height: $diameter;
+        border: 10px solid $grey;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0.0turn);
+
+        background-color: $ring2;
+
+        &::after {
+            content: "";
+            position: relative;
+            height: 20%;
+            width: 20%;
+            background-color: $accent;
+            border: 1px solid $accent;
+            border-radius: 50%;
+            box-shadow: 0 0 0 100px $ring1;
+            background-image: url('../assets/arrows-up-down-left-right-solid2.svg');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            // color: $white;
+            transform: rotate(45deg);
         }
 
         &:hover {
-            color: $gold;
-            transform: translateY(-10px);
+            .devIconContainer {
+                animation-play-state: paused;
+            }
         }
     }
 
-    .accessibility {
+    .devIconContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        height: $devDiameter;
+        width: $devDiameter;
+
+        background-color: $white;
+        border: 5px solid $grey;
+        border-radius: 100%;
+
+        color: $accent;
+        transition: 0.5s;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -$devRadius;
+        
+        i,
+        .material-symbols-outlined {
+            font-size: 50px;
+            transition: 0.2s;
+        }
+        
+        > * {
+            transition: 0.2s;
+        }
+
+        &:hover {
+            > * {
+                color: $grey;
+                transform: translateY(-10px);
+            }
+        }
+    }
+
+    @for $i from 1 through 10 {
+        .devIconContainer:nth-child(#{$i}) {
+            @include position($i, $angle, $radius);
+        }
     }
 
     .skillName {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
-@media (max-width: 645px) {
+@media (max-width: 835px) {  
     .skills {
-        .devIconContainer  {
-            @include containerWidth(3, 40px);
+        .skillsWrapper {
+            height: auto;
         }
-    }
-}
 
-@media (max-width: 460px) {
-    .skills {
         .devIconContainer  {
-            @include containerWidth(2, 40px);
+            position: static;
+            margin: 20px 20px;
         }
-    }
-}
 
-@media (max-width: 390px) {
-    .skills {
-        .devIconContainer  {
-            @include containerWidth(1, 40px);
+        @for $i from 1 through 10 {
+            .devIconContainer:nth-child(#{$i}) {
+                transform: unset;
+                animation: none;
+            }
+        }
+
+        .skillsIconGallery{
+            position: static;
+            transform: unset;
+            width: 100%;
+            height: unset;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+
+            justify-content: center;
+        }
+
+        .skillsIconGallery::after {
+            display: none;
         }
     }
 }

@@ -2,9 +2,11 @@
 $black: #161616;
 $grey: #333333;
 $white: #FFFFFF;
+$transWhite: rgba(255, 255, 255, 0.5);
 $offWhite: #f2f2f2;
 $lightgray: #d3d3d3;
-$accent: #2ba5e2;
+$accent: #FC5703;
+$ocean: #2ba5e2;
 $gold: #e2c42b;
 $blue: #009CC4;
 $green: #345231;
@@ -12,3 +14,15 @@ $green: #345231;
 // Font Styles
 $body-font: 'Poppins', sans-serif;
 $paragraph-font: 'Raleway', sans-serif;
+
+// dev icon container values
+$diameter: 600px;
+$radius: math.div($diameter, 2);
+$devDiameter: 145px;
+$devRadius: math.div($devDiameter, 2);
+$angle: 36;
+
+// Skills colour selection
+$ring1: #D84B02;
+$ring2: #BA4102;
+$ring3: #9E3701;
