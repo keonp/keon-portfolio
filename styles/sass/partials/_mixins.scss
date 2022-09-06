@@ -1,6 +1,5 @@
 @mixin containerWidth($columns, $pixels) {
     width: calc((100% / $columns) - $pixels);
-    height: width;
 }
 
 @mixin contactGalleryWidth($min-width, $height) {
@@ -101,47 +100,5 @@
         100% {
             transform: rotate(($rotation + 1) * 1turn) translate($radius) rotate(-($rotation + 1) * 1turn);
         }  
-    }
-}
-
-@keyframes bigSpin {
-    10% {
-        transform: translate(-50%, -50%) rotate(0.1turn);
-    }
-    
-    20% {
-        transform: translate(-50%, -50%) rotate(0.2turn);
-    }
-    
-    30% {
-        transform: translate(-50%, -50%) rotate(0.3turn);   
-    }
-    
-    40% {
-        transform: translate(-50%, -50%) rotate(0.4turn);
-    }
-    
-    50% {
-        transform: translate(-50%, -50%) rotate(0.5turn);
-    }
-    
-    60% {
-        transform: translate(-50%, -50%) rotate(0.6turn);
-    }
-    
-    70% {
-        transform: translate(-50%, -50%) rotate(0.7turn);
-    }
-    
-    80% {
-        transform: translate(-50%, -50%) rotate(0.8turn);
-    }
-    
-    90% {
-        transform: translate(-50%, -50%) rotate(0.9turn);
-    }
-    
-    100% {
-        transform: translate(-50%, -50%) rotate(1turn);
     }
 }

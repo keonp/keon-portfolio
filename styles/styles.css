@@ -443,90 +443,6 @@ section {
     background-position: 0% 50%;
   }
 }
-@-webkit-keyframes bigSpin {
-  10% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.1turn);
-            transform: translate(-50%, -50%) rotate(0.1turn);
-  }
-  20% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.2turn);
-            transform: translate(-50%, -50%) rotate(0.2turn);
-  }
-  30% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.3turn);
-            transform: translate(-50%, -50%) rotate(0.3turn);
-  }
-  40% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.4turn);
-            transform: translate(-50%, -50%) rotate(0.4turn);
-  }
-  50% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.5turn);
-            transform: translate(-50%, -50%) rotate(0.5turn);
-  }
-  60% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.6turn);
-            transform: translate(-50%, -50%) rotate(0.6turn);
-  }
-  70% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.7turn);
-            transform: translate(-50%, -50%) rotate(0.7turn);
-  }
-  80% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.8turn);
-            transform: translate(-50%, -50%) rotate(0.8turn);
-  }
-  90% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.9turn);
-            transform: translate(-50%, -50%) rotate(0.9turn);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
-  }
-}
-@keyframes bigSpin {
-  10% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.1turn);
-            transform: translate(-50%, -50%) rotate(0.1turn);
-  }
-  20% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.2turn);
-            transform: translate(-50%, -50%) rotate(0.2turn);
-  }
-  30% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.3turn);
-            transform: translate(-50%, -50%) rotate(0.3turn);
-  }
-  40% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.4turn);
-            transform: translate(-50%, -50%) rotate(0.4turn);
-  }
-  50% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.5turn);
-            transform: translate(-50%, -50%) rotate(0.5turn);
-  }
-  60% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.6turn);
-            transform: translate(-50%, -50%) rotate(0.6turn);
-  }
-  70% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.7turn);
-            transform: translate(-50%, -50%) rotate(0.7turn);
-  }
-  80% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.8turn);
-            transform: translate(-50%, -50%) rotate(0.8turn);
-  }
-  90% {
-    -webkit-transform: translate(-50%, -50%) rotate(0.9turn);
-            transform: translate(-50%, -50%) rotate(0.9turn);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(1turn);
-            transform: translate(-50%, -50%) rotate(1turn);
-  }
-}
 .header {
   height: 100vh;
   background-image: url(../assets/header-background.jpg);
@@ -809,14 +725,12 @@ section {
   text-align: center;
 }
 .skills h2 {
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 .skills .skillsWrapper {
   -webkit-box-shadow: 0px 20px 20px #d3d3d3;
           box-shadow: 0px 20px 20px #d3d3d3;
-  min-height: 100vh;
-  height: 672.5px;
-  margin: 72.5px, 0;
+  height: 782.25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1819,8 +1733,11 @@ section {
 
 @media (max-width: 835px) {
   .skills .skillsWrapper {
-    min-height: unset;
-    height: unset;
+    height: auto;
+  }
+  .skills .devIconContainer {
+    position: static;
+    margin: 20px 20px;
   }
   .skills .devIconContainer:nth-child(1) {
     -webkit-transform: unset;
@@ -1886,18 +1803,17 @@ section {
     position: static;
     -webkit-transform: unset;
             transform: unset;
-    width: unset;
+    width: 100%;
     height: unset;
     border: none;
     border-radius: 0;
     background-color: transparent;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .skills .skillsIconGallery::after {
     display: none;
-  }
-  .skills .devIconContainer {
-    margin: unset;
-    position: static;
   }
 }
 .portfolio {
@@ -1907,7 +1823,7 @@ section {
 .portfolio .underline {
   margin-bottom: 40px;
 }
-.portfolio .newPortfolioContainer {
+.portfolio .portfolioContainer {
   padding: 30px;
   margin-bottom: 25px;
   -webkit-transition: 0.3s;
@@ -1921,7 +1837,7 @@ section {
   -webkit-box-shadow: 0 20px 60px #d3d3d3;
           box-shadow: 0 20px 60px #d3d3d3;
 }
-.portfolio .newProjectImgContainer {
+.portfolio .projectImgContainer {
   width: 42.7%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1933,7 +1849,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
 }
-.portfolio .newProjectDescriptionContainer {
+.portfolio .projectDescriptionContainer {
   width: 57.3%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1949,7 +1865,7 @@ section {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.portfolio .newProjectDescriptionContainer p {
+.portfolio .projectDescriptionContainer p {
   text-align: left;
 }
 .portfolio .projectSkills > * {
@@ -1963,17 +1879,17 @@ section {
   color: #e2c42b;
   background-color: #161616;
 }
-.portfolio .project2Container .projectSkills > * {
+.portfolio .project3Container .projectSkills > * {
   border: 3px solid #161616;
   color: #FFFFFF;
   background-color: #345231;
 }
-.portfolio .project3Container .projectSkills > * {
+.portfolio .project2Container .projectSkills > * {
   border: 3px solid #e2c42b;
   color: #161616;
   background-color: #f2f2f2;
 }
-.portfolio .projectImg {
+.portfolio .projectIcon {
   width: 25px;
   height: 25px;
 }
@@ -2011,21 +1927,21 @@ section {
   .portfolio .projectSkills > * {
     margin: 10px 0;
   }
-  .portfolio .newProjectImgContainer,
-.portfolio .newProjectDescriptionContainer {
+  .portfolio .projectImgContainer,
+.portfolio .projectDescriptionContainer {
     width: 100%;
   }
-  .portfolio .newProjectDescriptionContainer {
+  .portfolio .projectDescriptionContainer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .portfolio .newProjectDescriptionContainer p {
+  .portfolio .projectDescriptionContainer p {
     text-align: center;
   }
 }
 @media (max-width: 569px) {
-  .portfolio .project3Title {
+  .portfolio .project2Title {
     display: -webkit-box;
   }
 }
@@ -2131,7 +2047,6 @@ section {
 .contact .inputs input {
   padding: 5px 4px;
   width: calc(50% - 10px);
-  height: width;
   border: none;
   border-bottom: 1px solid black;
 }
@@ -2169,7 +2084,6 @@ section {
   }
   .contact .contactGallery > * {
     width: calc(50% - 40px);
-    height: width;
   }
 }
 @media (max-width: 855px) {
@@ -2184,7 +2098,6 @@ section {
   }
   .contact .inputs input {
     width: calc(100% - 0px);
-    height: width;
   }
   .contact .inputs input:nth-child(2) {
     margin-bottom: 35px;
@@ -2196,7 +2109,6 @@ section {
 @media (max-width: 645px) {
   .contact .contactGallery > * {
     width: calc(100% - 40px);
-    height: width;
   }
 }
 .footer {

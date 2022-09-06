@@ -2,15 +2,12 @@
     background-color: $offWhite;
     text-align: center;
      h2 {
-        padding-bottom: 150px;
+        padding-bottom: 50px;
      }
 
     .skillsWrapper {
         box-shadow: 0px 20px 20px $lightgray;
-        // padding: 30px;
-        min-height: 100vh;
-        height: calc(($diameter + math.div($devDiameter, 2)));
-        margin: 72.5px, 0;
+        height: calc(($diameter + $devDiameter) * 1.05);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,7 +28,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(0.0turn);
-        // animation: bigSpin 10s linear infinite;
 
         background-color: $ring2;
 
@@ -60,19 +56,16 @@
     }
 
     .devIconContainer {
-        // @include containerWidth(5, 40px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        // margin: 40px 20px;
         height: $devDiameter;
         width: $devDiameter;
-        // background-color: $grey;
+
         background-color: $white;
         border: 5px solid $grey;
-        // padding: 5px;
         border-radius: 100%;
 
         color: $accent;
@@ -81,7 +74,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: -($devRadius);
+        margin: -$devRadius;
         
         i,
         .material-symbols-outlined {
@@ -99,7 +92,6 @@
                 transform: translateY(-10px);
             }
         }
-
     }
 
     @for $i from 1 through 10 {
@@ -113,14 +105,15 @@
     }
 }
 
-@media (max-width: 835px) {
-
-    
+@media (max-width: 835px) {  
     .skills {
-
         .skillsWrapper {
-            min-height: unset;
-            height: unset;
+            height: auto;
+        }
+
+        .devIconContainer  {
+            position: static;
+            margin: 20px 20px;
         }
 
         @for $i from 1 through 10 {
@@ -133,47 +126,17 @@
         .skillsIconGallery{
             position: static;
             transform: unset;
-            width: unset;
+            width: 100%;
             height: unset;
             border: none;
             border-radius: 0;
             background-color: transparent;
+
+            justify-content: center;
         }
 
         .skillsIconGallery::after {
             display: none;
         }
-
-        .devIconContainer  {
-            margin: unset;
-            position: static;
-            // animation: none;
-            // animation-fill-mode: forwards;
-            // @include containerWidth(3, 40px);
-        }
     }
 }
-
-@media (max-width: 645px) {
-    .skills {
-        .devIconContainer  {
-            // @include containerWidth(3, 40px);
-        }
-    }
-}
-
-// @media (max-width: 460px) {
-//     .skills {
-//         .devIconContainer  {
-//             // @include containerWidth(2, 40px);
-//         }
-//     }
-// }
-
-// @media (max-width: 390px) {
-//     .skills {
-//         .devIconContainer  {
-//             // @include containerWidth(1, 40px);
-//         }
-//     }
-// }

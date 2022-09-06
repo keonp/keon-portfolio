@@ -89,29 +89,10 @@ app.fadeIn = () => {
     }
 }
 
-// function to display skills in a circular design
-app.displaySkills = () => {
-    const diameter = 600;
-    const angle = 36;
-
-    skills.forEach((element, index) => {
-        const rotation = index * angle + 252;
-        element.style.transform = `rotate(${rotation}deg) translate(${diameter / 2}px) rotate(-${rotation}deg)`;
-    })
-}
-
-// app.clickTest = () => {
-//     test.addEventListener('click', () => {
-//         app.displaySkills();
-//     })
-// }
-
 app.init = () => {
     app.displayMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
-    // app.displaySkills();
-    // app.clickTest();
 }
 
 app.init();

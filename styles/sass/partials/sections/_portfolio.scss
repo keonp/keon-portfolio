@@ -1,6 +1,5 @@
 .portfolio {
     text-align: center;
-    // background-image: linear-gradient(to bottom, $offWhite, $gold, $accent, $lightgray, $offWhite);
     background-color: $white;
 
     .portfolioGallery {
@@ -12,7 +11,7 @@
         margin-bottom: 40px;
     }
 
-    .newPortfolioContainer {
+    .portfolioContainer {
         padding: 30px;
         margin-bottom: 25px;
         transition: 0.3s;
@@ -36,13 +35,13 @@
     //     // ) 1 100%;
     // }
 
-    .newProjectImgContainer {
+    .projectImgContainer {
         width: 42.7%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .newProjectDescriptionContainer {
+    .projectDescriptionContainer {
         width: 57.3%;
         display: flex;
         flex-direction: column;
@@ -73,7 +72,7 @@
         }
     }
     
-    .project2Container {
+    .project3Container {
         .projectSkills {
             > * {
                 border: 3px solid $black;
@@ -83,7 +82,7 @@
         }
     }
 
-    .project3Container {
+    .project2Container {
         .projectSkills {
             > * {
                 border: 3px solid $gold;
@@ -93,7 +92,7 @@
         }
     }
 
-    .projectImg {
+    .projectIcon {
         width: 25px;
         height: 25px;
     }
@@ -138,12 +137,12 @@
             }
         }
 
-        .newProjectImgContainer,
-        .newProjectDescriptionContainer {
+        .projectImgContainer,
+        .projectDescriptionContainer {
             width: 100%;
         }
 
-        .newProjectDescriptionContainer {
+        .projectDescriptionContainer {
             align-items: center;
             p {
                 text-align: center;
@@ -154,7 +153,7 @@
 }
 @media (max-width: 569px) {
     .portfolio {
-        .project3Title {
+        .project2Title {
             display: -webkit-box;
         }
     }
