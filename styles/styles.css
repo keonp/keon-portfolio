@@ -444,7 +444,7 @@ section {
   }
 }
 .header {
-  height: 100vh;
+  height: calc(100vh - 55px);
   background-image: url(../assets/header-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -586,7 +586,6 @@ section {
 }
 .navBar .mobileMenu {
   height: 100vh;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,22 +617,12 @@ section {
   position: fixed;
   right: 0%;
   top: 0%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-color: #FC5703;
   width: 100%;
-  -webkit-clip-path: circle(30px at calc(100% - 65px) 65px);
-          clip-path: circle(30px at calc(100% - 65px) 65px);
+  -webkit-clip-path: circle(25px at calc(100% - 41px) 27.5px);
+          clip-path: circle(25px at calc(100% - 41px) 27.5px);
 }
 .mobileNav a {
   color: #FFFFFF;

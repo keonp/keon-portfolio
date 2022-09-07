@@ -31,6 +31,14 @@ app.displayMobileMenu = () => {
     })
 }
 
+app.pressMobileMenu = () => {
+    hamburgerMenu.addEventListener('keydown', function(e) {
+        if (e.keyCode ===  13) {
+            app.menuToggle();
+        } 
+    })
+}
+
 // A method to close  the mobile menu once a link on the mobile menu has been clicked
 app.closeMobileMenu = () => {
     mobileNavLinks.forEach((link) => {
@@ -42,8 +50,6 @@ app.closeMobileMenu = () => {
 
 // a method to toggle classes related to mobile menu display
 app.menuToggle = () => {
-    // navBar.classList.toggle('extendMenuDrop');
-    // navBarContainer.classList.toggle('extendMenuBorder');
     mobileNav.classList.toggle('extendMenuDisplay');
     menuBar[0].classList.toggle('bar1');
     menuBar[1].classList.toggle('bar2');
@@ -52,8 +58,6 @@ app.menuToggle = () => {
 
 // a method to remove classes related to mobile menu display
 app.menuRemove = () => {
-    // navBar.classList.remove('extendMenuDrop');
-    // navBarContainer.classList.remove('extendMenuBorder');
     mobileNav.classList.remove('extendMenuDisplay');
     menuBar[0].classList.remove('bar1');
     menuBar[1].classList.remove('bar2');
@@ -91,6 +95,7 @@ app.fadeIn = () => {
 
 app.init = () => {
     app.displayMobileMenu();
+    app.pressMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
 }

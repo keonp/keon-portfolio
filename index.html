@@ -20,27 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
           
 </head>
-<body>
-
-    <!-- Header -->
-    <header class="header" id="home">
-        <div class="wrapper">
-            <h1>Keon Pierre</h1>
-            
-            <div class="subtextContainer">    
-                <ul class="aboutMeList">
-                    <!-- <li> </li> -->
-                    <li>front-end developer</li>
-                    <li>amateur jiu-jitsu practioner</li>
-                    <li>problem solver</li>
-                    <li>technology enthusiast</li>
-                    <li>front-end developer</li>
-                </ul>
-            </div>
-
-            <a href="#contact" class="button contactMe">Contact Me</a>
-        </div>
-    </header>
+<body id="home">
 
     <!-- Menu/Nav Bar -->
     <nav class="navBar">
@@ -66,7 +46,7 @@
                     </li>
                 </ul>
 
-                <div class="hamburgerMenu">
+                <div class="hamburgerMenu" tabindex="0">
                     <span class="menuBar"></span>
                     <span class="menuBar midBar"></span>
                     <span class="menuBar"></span>
@@ -76,6 +56,9 @@
             <!-- Mobile nav bar -->
             <nav class="mobileNav">
                 <ul class="mobileMenu">
+                    <li>
+                        <a href="#home" class="mobileNavLinks">Home</a>
+                    </li>
                     <li>
                         <a href="#about" class="mobileNavLinks">About</a>
                     </li>
@@ -93,6 +76,25 @@
         </div>
     </nav>
 
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <h1>Keon Pierre</h1>
+            
+            <div class="subtextContainer">    
+                <ul class="aboutMeList">
+                    <!-- <li> </li> -->
+                    <li>front-end developer</li>
+                    <li>amateur jiu-jitsu practioner</li>
+                    <li>problem solver</li>
+                    <li>technology enthusiast</li>
+                    <li>front-end developer</li>
+                </ul>
+            </div>
+
+            <a href="#contact" class="button contactMe">Contact Me</a>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <main>

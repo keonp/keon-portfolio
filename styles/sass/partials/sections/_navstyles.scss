@@ -57,7 +57,6 @@
 
     .mobileMenu {
         height: 100vh;
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -74,27 +73,18 @@
     .midBar {
         transition: 0.2s;
     }
-
 }
 
 .mobileNav{
     visibility: hidden;
     position: fixed;
-    // position: absolute;
     right: 0%;
     top: 0%;
-    // height: 50px;
-    // width: 50px;
-    // border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     transition: all 0.5s ease-in-out;    
     background-color: $accent;  
     width: 100%;
-    // clip-path: circle(0%);
-    clip-path: circle(30px at calc(100% - 65px) 65px);
+    clip-path: circle(25px at calc(100% - 41px) 27.5px);
+
     a {
         color: $white;
 
@@ -110,27 +100,14 @@
     display: none;
 }
 
-
-// .extendMenuDrop {
-//     height: auto;
-// }
-
 .extendMenuDisplay {
-    // border-bottom: 2px solid $accent;
-    // padding-top: 15px;
-    // display: block;
     background-color: $accent;
-    // position: absolute;
-    // width: 100%;
-    // left: 0;
     border-radius: 0;
     visibility: visible;
     height: 100vh;
     width: 100%;
     clip-path: circle(100%);
     transition: all 0.5s ease-in-out;
-    // top: 0%;
-    // position: fixed;
 }
 
 .bar1 {
@@ -149,7 +126,6 @@
 
 @media (max-width: 645px) {
     .navBar {  
-        // padding: 10.5px 0;
 
         .mainMenu {
             display: none;
