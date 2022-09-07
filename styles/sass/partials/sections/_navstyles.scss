@@ -1,14 +1,11 @@
 .navBar {
-    // background: linear-gradient(-45deg, $white, $white, rgba(255, 217, 0, 0.445), $white, $white);
-    // background: linear-gradient(-45deg, $accent, $blue, $black, $blue, $accent);
-    // background-size: 600%;
-    // animation: navGradient 30s ease infinite;
+
+    .wrapper {
+        position: relative;
+    }
+
     height: 55px;
     background-color: $transWhite;
-
-    // border-top: 3px solid $accent;
-    // border-bottom: 3px solid $accent;
-    // box-shadow: 0px 5px 20px $offWhite;
 
     display: flex;
     align-items: center;
@@ -19,12 +16,6 @@
 
     border-bottom: 2px solid black;
     border-top: 2px solid black;
-    // transition: 0.3s;
-    // opacity: 0.1;
-
-    // &:hover {
-    //     opacity: 1;
-    // }
     
     .navBarContainer {
         display: flex;
@@ -48,13 +39,12 @@
         &:hover,
         &:focus {
             color: $accent;
-            // border-bottom: 2.5px solid $accent;
         }
     }
 
     .menuBar {
         width: 40px;
-        height: 3.5px;
+        height: 5px;
         display: block;
         background-color: $accent;
         margin: 4px auto;
@@ -78,36 +68,57 @@
     .midBar {
         transition: 0.2s;
     }
+
 }
 
-.hamburgerMenu,
-.mobileNav {
+.mobileNav{
+    visibility: hidden; 
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;      
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $black;
+        }
+    }
+}
+
+.hamburgerMenu{
     display: none;
 }
 
-.mobileNav{ 
-    // background: linear-gradient(-45deg, $white, $white, rgba(255, 217, 0, 0.445), $white, $white);
-    // background-size: 600%;
-    // animation: navGradient 30s ease infinite;
-    background-color: $white;
-}
 
 .extendMenuDrop {
     height: auto;
 }
 
 .extendMenuDisplay {
-    border-bottom: 2px solid $accent;
-    padding-top: 15px;
-    display: block;
-    background-color: $white;
-    position: absolute;
+    // border-bottom: 2px solid $accent;
+    // padding-top: 15px;
+    // display: block;
+    background-color: $accent;
+    // position: absolute;
+    // width: 100%;
+    // left: 0;
+    border-radius: 0;
+    visibility: visible;
+    height: 100vh;
     width: 100%;
-    left: 0;
 }
 
 .bar1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
+    transform: rotate(-45deg) translate(-9px, 9px);
 }
 
 .bar2 {
@@ -115,12 +126,7 @@
 }
 
 .bar3 {
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.extendMenuBorder {
-    border-bottom: 1.5px solid $accent;
-    padding-bottom: 12px;
+    transform: rotate(45deg) translate(-9px, -9px);
 }
 
 @media (max-width: 645px) {

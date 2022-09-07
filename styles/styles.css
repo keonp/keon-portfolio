@@ -509,8 +509,8 @@ section {
   color: #FFFFFF;
   width: 400px;
   text-align: center;
-  -webkit-animation: slide 7s infinite;
-          animation: slide 7s infinite;
+  -webkit-animation: slide 6s infinite;
+          animation: slide 6s infinite;
 }
 
 @media (max-width: 645px) {
@@ -537,6 +537,9 @@ section {
   top: 0;
   border-bottom: 2px solid black;
   border-top: 2px solid black;
+}
+.navBar .wrapper {
+  position: relative;
 }
 .navBar .navBarContainer {
   display: -webkit-box;
@@ -571,7 +574,7 @@ section {
 }
 .navBar .menuBar {
   width: 40px;
-  height: 3.5px;
+  height: 5px;
   display: block;
   background-color: #FC5703;
   margin: 4px auto;
@@ -593,13 +596,36 @@ section {
   transition: 0.2s;
 }
 
-.hamburgerMenu,
 .mobileNav {
-  display: none;
+  visibility: hidden;
+  position: fixed;
+  right: 0%;
+  top: 0%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.mobileNav a {
+  color: #FFFFFF;
+}
+.mobileNav a:hover, .mobileNav a:focus {
+  color: #161616;
 }
 
-.mobileNav {
-  background-color: #FFFFFF;
+.hamburgerMenu {
+  display: none;
 }
 
 .extendMenuDrop {
@@ -607,18 +633,16 @@ section {
 }
 
 .extendMenuDisplay {
-  border-bottom: 2px solid #FC5703;
-  padding-top: 15px;
-  display: block;
-  background-color: #FFFFFF;
-  position: absolute;
+  background-color: #FC5703;
+  border-radius: 0;
+  visibility: visible;
+  height: 100vh;
   width: 100%;
-  left: 0;
 }
 
 .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-8px, 8px);
-          transform: rotate(-45deg) translate(-8px, 8px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 9px);
+          transform: rotate(-45deg) translate(-9px, 9px);
 }
 
 .bar2 {
@@ -626,13 +650,8 @@ section {
 }
 
 .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-          transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.extendMenuBorder {
-  border-bottom: 1.5px solid #FC5703;
-  padding-bottom: 12px;
+  -webkit-transform: rotate(45deg) translate(-9px, -9px);
+          transform: rotate(45deg) translate(-9px, -9px);
 }
 
 @media (max-width: 645px) {
