@@ -509,8 +509,8 @@ section {
   color: #FFFFFF;
   width: 400px;
   text-align: center;
-  -webkit-animation: slide 7s linear infinite;
-          animation: slide 7s linear infinite;
+  -webkit-animation: slide 7s infinite;
+          animation: slide 7s infinite;
 }
 
 @media (max-width: 645px) {
@@ -2020,7 +2020,7 @@ section {
   transition: 0.2s;
 }
 .contact .socialMedia ul a:hover, .contact .socialMedia ul a:focus {
-  color: #e2c42b;
+  color: #161616;
 }
 .contact .myForm {
   margin-top: 40px;
