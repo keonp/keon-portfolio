@@ -621,8 +621,8 @@ section {
   transition: all 0.5s ease-in-out;
   background-color: #FC5703;
   width: 100%;
-  -webkit-clip-path: circle(25px at calc(100% - 41px) 27.5px);
-          clip-path: circle(25px at calc(100% - 41px) 27.5px);
+  -webkit-clip-path: circle(25px at calc(100% - 49px) 27.5px);
+          clip-path: circle(25px at calc(100% - 49px) 27.5px);
 }
 .mobileNav a {
   color: #FFFFFF;
