@@ -584,6 +584,23 @@ section {
   -webkit-transition: 0.35s;
   transition: 0.35s;
 }
+.navBar .mobileMenu {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .navBar .mobileMenu li {
   padding: 20px 0 20px 5%;
 }
@@ -601,9 +618,6 @@ section {
   position: fixed;
   right: 0%;
   top: 0%;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,8 +628,12 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #FC5703;
+  width: 100%;
+  -webkit-clip-path: circle(30px at calc(100% - 65px) 65px);
+          clip-path: circle(30px at calc(100% - 65px) 65px);
 }
 .mobileNav a {
   color: #FFFFFF;
@@ -625,11 +643,8 @@ section {
 }
 
 .hamburgerMenu {
+  z-index: 10;
   display: none;
-}
-
-.extendMenuDrop {
-  height: auto;
 }
 
 .extendMenuDisplay {
@@ -638,11 +653,16 @@ section {
   visibility: visible;
   height: 100vh;
   width: 100%;
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 9px);
           transform: rotate(-45deg) translate(-9px, 9px);
+  background-color: #FFFFFF !important;
 }
 
 .bar2 {
@@ -652,12 +672,10 @@ section {
 .bar3 {
   -webkit-transform: rotate(45deg) translate(-9px, -9px);
           transform: rotate(45deg) translate(-9px, -9px);
+  background-color: #FFFFFF !important;
 }
 
 @media (max-width: 645px) {
-  .navBar {
-    padding: 10.5px 0;
-  }
   .navBar .mainMenu {
     display: none;
   }

@@ -42,8 +42,8 @@ app.closeMobileMenu = () => {
 
 // a method to toggle classes related to mobile menu display
 app.menuToggle = () => {
-    navBar.classList.toggle('extendMenuDrop');
-    navBarContainer.classList.toggle('extendMenuBorder');
+    // navBar.classList.toggle('extendMenuDrop');
+    // navBarContainer.classList.toggle('extendMenuBorder');
     mobileNav.classList.toggle('extendMenuDisplay');
     menuBar[0].classList.toggle('bar1');
     menuBar[1].classList.toggle('bar2');
@@ -52,8 +52,8 @@ app.menuToggle = () => {
 
 // a method to remove classes related to mobile menu display
 app.menuRemove = () => {
-    navBar.classList.remove('extendMenuDrop');
-    navBarContainer.classList.remove('extendMenuBorder');
+    // navBar.classList.remove('extendMenuDrop');
+    // navBarContainer.classList.remove('extendMenuBorder');
     mobileNav.classList.remove('extendMenuDisplay');
     menuBar[0].classList.remove('bar1');
     menuBar[1].classList.remove('bar2');

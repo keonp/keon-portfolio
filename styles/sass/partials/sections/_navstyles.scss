@@ -56,6 +56,12 @@
     }
 
     .mobileMenu {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         li {
             padding: 20px 0 20px 5%;
         }
@@ -72,18 +78,23 @@
 }
 
 .mobileNav{
-    visibility: hidden; 
+    visibility: hidden;
     position: fixed;
+    // position: absolute;
     right: 0%;
     top: 0%;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    // height: 50px;
+    // width: 50px;
+    // border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: 0.5s;      
+    transition: all 0.5s ease-in-out;    
+    background-color: $accent;  
+    width: 100%;
+    // clip-path: circle(0%);
+    clip-path: circle(30px at calc(100% - 65px) 65px);
     a {
         color: $white;
 
@@ -95,13 +106,14 @@
 }
 
 .hamburgerMenu{
+    z-index: 10;
     display: none;
 }
 
 
-.extendMenuDrop {
-    height: auto;
-}
+// .extendMenuDrop {
+//     height: auto;
+// }
 
 .extendMenuDisplay {
     // border-bottom: 2px solid $accent;
@@ -115,10 +127,15 @@
     visibility: visible;
     height: 100vh;
     width: 100%;
+    clip-path: circle(100%);
+    transition: all 0.5s ease-in-out;
+    // top: 0%;
+    // position: fixed;
 }
 
 .bar1 {
     transform: rotate(-45deg) translate(-9px, 9px);
+    background-color: $white !important;
 }
 
 .bar2 {
@@ -127,12 +144,12 @@
 
 .bar3 {
     transform: rotate(45deg) translate(-9px, -9px);
+    background-color: $white !important;
 }
 
 @media (max-width: 645px) {
     .navBar {  
-        // align-items: flex-start;
-        padding: 10.5px 0;
+        // padding: 10.5px 0;
 
         .mainMenu {
             display: none;
