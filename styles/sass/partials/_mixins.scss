@@ -7,28 +7,100 @@
     height: $height;
 }
 
-@keyframes swipeEffect {
-    0% {width: 264.567px;}
-    5% {width: 264.567px;}
-    10% {width: 0px;}
-    15% {width: 0px;}
-    20% {width: 0px;}
-    25% {width: 376.317px; content: 'amateur jiu-jitsu practioner';}
+@mixin projectSkillsStyles($borderColour, $mainColour, $backgroundColour) {
+    border: 3px solid $borderColour;
+    color: $mainColour;
+    background-color: $backgroundColour;
 
-    35% {width: 376.317px;}
-    40% {width: 0px;}
-    45% {width: 0px;}
-    50% {width: 0px;}
-    55% {width: 200.283px; content: 'problem solver';}
+}
 
-    60% {width: 200.283px;}
-    65% {width: 0px;}
-    70% {width: 0px;}
-    75% {width: 0px;}
-    80% {width: 295.433px; content: 'technology enthusiast';}
+@keyframes slide {
+    0%{
+        transform: translateX(-3.9%); // FE
+    }
+    
+    10% {
+        transform: translateX(0.1%); // wait FE
+    }
 
-    85% {width: 295.433px;}
-    90% {width: 0px;}
-    95% {width: 0px;}
-    100% {width: 264.567px; content: 'front-end developer';}
+    25% {
+        transform: translateX(-103.9%); // AJ
+    }
+
+    35% {
+        transform: translateX(-99.9%); // wait AJ
+    }
+    
+    50% {
+        transform: translateX(-203.9%); // PB
+    }
+
+    60% {
+        transform: translateX(-199.9%); // wait PB
+    }
+    
+    75% {
+        transform: translateX(-303.9%); // TECH
+    }
+
+    85% {
+        transform: translateX(-299.9%); // wait TECH
+    }
+
+    100% {
+        transform: translateX(-403.9%); // FE
+    } 
+}
+
+@mixin position($index, $angle, $radius) {
+    $rotation: math.div($index, 10) + 0.6;
+
+    transform: rotate(($rotation) * 1turn) translate($radius) rotate(-($rotation) * 1turn);
+
+    @include spinWheel($rotation, $radius, $index);
+    animation: spin#{$index} 20s linear infinite;
+}
+
+@mixin spinWheel ($rotation, $radius, $index) {
+    @keyframes spin#{$index} {
+        10% {
+            transform: rotate(($rotation + 0.1) * 1turn) translate($radius) rotate(-($rotation + 0.1) * 1turn);
+        }
+        
+        20% {
+            transform: rotate(($rotation + 0.2) * 1turn) translate($radius) rotate(-($rotation + 0.2) * 1turn);
+        }
+        
+        30% {
+            transform: rotate(($rotation + 0.3) * 1turn) translate($radius) rotate(-($rotation + 0.3) * 1turn);
+        }
+        
+        40% {
+            transform: rotate(($rotation + 0.4) * 1turn) translate($radius) rotate(-($rotation + 0.4) * 1turn);
+        }
+        
+        50% {
+            transform: rotate(($rotation + 0.5) * 1turn) translate($radius) rotate(-($rotation + 0.5) * 1turn);
+        }
+        
+        60% {
+            transform: rotate(($rotation + 0.6) * 1turn) translate($radius) rotate(-($rotation + 0.6) * 1turn);
+        }
+        
+        70% {
+            transform: rotate(($rotation + 0.7) * 1turn) translate($radius) rotate(-($rotation + 0.7) * 1turn);
+        }
+        
+        80% {
+            transform: rotate(($rotation + 0.8) * 1turn) translate($radius) rotate(-($rotation + 0.8) * 1turn);
+        }
+        
+        90% {
+            transform: rotate(($rotation + 0.9) * 1turn) translate($radius) rotate(-($rotation + 0.9) * 1turn);
+        }
+        
+        100% {
+            transform: rotate(($rotation + 1) * 1turn) translate($radius) rotate(-($rotation + 1) * 1turn);
+        }  
+    }
 }

@@ -1,6 +1,11 @@
 .navBar {
-    background-color: $accent;
+
+    .wrapper {
+        position: relative;
+    }
+
     height: 55px;
+    background-color: $transWhite;
 
     display: flex;
     align-items: center;
@@ -8,6 +13,9 @@
     position: sticky;
     z-index: 100;
     top: 0;
+
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
     
     .navBarContainer {
         display: flex;
@@ -22,26 +30,23 @@
     }
     
     a {
-        color: $white;
+        color: $black;
         text-transform: uppercase;
         letter-spacing: 1px;
+        font-weight: bold;
+        transition: 0.3s;
 
         &:hover,
         &:focus {
-            color: $gold;
-            border-bottom: 2.5px solid $gold;
+            color: $accent;
         }
-    }
-
-    .logo {
-        font-weight: bold;
     }
 
     .menuBar {
         width: 40px;
-        height: 3.5px;
+        height: 5px;
         display: block;
-        background-color: $white;
+        background-color: $accent;
         margin: 4px auto;
         border-radius: 30px;
     }
@@ -51,6 +56,11 @@
     }
 
     .mobileMenu {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         li {
             padding: 20px 0 20px 5%;
         }
@@ -65,26 +75,44 @@
     }
 }
 
-.hamburgerMenu,
-.mobileNav {
+.mobileNav{
+    visibility: hidden;
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    transition: all 0.5s ease-in-out;    
+    background-color: $accent;  
+    width: 100%;
+    clip-path: circle(25px at calc(100% - 49px) 27.5px);
+
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $black;
+        }
+    }
+}
+
+.hamburgerMenu{
+    z-index: 10;
     display: none;
 }
 
-.extendMenuDrop {
-    height: auto;
-}
-
 .extendMenuDisplay {
-    padding-top: 15px;
-    display: block;
     background-color: $accent;
-    position: absolute;
+    border-radius: 0;
+    visibility: visible;
+    height: 100vh;
     width: 100%;
-    left: 0;
+    clip-path: circle(100%);
+    transition: all 0.5s ease-in-out;
 }
 
 .bar1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
+    transform: rotate(-45deg) translate(-9px, 9px);
+    background-color: $white !important;
 }
 
 .bar2 {
@@ -92,18 +120,12 @@
 }
 
 .bar3 {
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.extendMenuBorder {
-    border-bottom: 1.5px solid $white;
-    padding-bottom: 12px;
+    transform: rotate(45deg) translate(-9px, -9px);
+    background-color: $white !important;
 }
 
 @media (max-width: 645px) {
     .navBar {  
-        align-items: flex-start;
-        padding: 10.5px 0;
 
         .mainMenu {
             display: none;

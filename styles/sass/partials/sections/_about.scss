@@ -1,4 +1,7 @@
 .about {
+    // background-image: linear-gradient(to bottom, $white, $offWhite);
+    background-color: $white;
+    
     .wrapper {
         display: flex;
         justify-content: space-around;
@@ -15,6 +18,23 @@
         transition: 0.2s;
     }
     
+    .profileImg {
+        border-radius: 50%;
+        border: 5px solid $accent;
+        box-shadow: 0 0 0px 15px $grey;
+
+        // &::before {
+        //     content: "";
+        //     height: 400px;
+        //     width: 400px;
+        //     background-color: green;
+        // }
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
     .profileBioContainer {
         display: flex;
         flex-direction: column;

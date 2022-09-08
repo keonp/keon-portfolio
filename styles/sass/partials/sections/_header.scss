@@ -1,5 +1,5 @@
 .header {
-    height: 100vh;
+    height: calc(100vh - 55px);
     background-image: url(../assets/header-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,51 +19,57 @@
 
     .contactMe {
         transition: 0.25s;
-        color: $black;
-        background-color: $white;
+        color: $white;
+        background-color: $accent;
+        border: 1px solid $accent;
 
         &:hover,
         &:focus {
-            color: $white;
-            background-color: $accent;
+            color: $black;
+            background-color: $white;
+            border: 1px solid $black;
         }
     }
 
     .subtextContainer {
-        position: relative;
+        height: 90px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
     }
-    
-    .subtext {
-        color: $white;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-align: center;
 
-        &::before {
-            transition: 0.2s;
-            content: 'Front-End Developer';
-            display: block;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: swipeEffect 13s linear infinite;
-        }
-        
-        &::after {
-            content: "|";
-            color: $accent;
-            font-size: 1.3rem;
-            position: absolute;
-            right: -4%;
-            top: -3%;
+    .aboutMeList {
+        width: 2500px;
+        display: flex;
+
+        > * {
+            font-family: $body-font;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $white;
+            width: 400px;
+            text-align: center;
+            animation: slide 6s infinite;
         }
     }
 }
 
 @media (max-width: 645px) {
     .header {
-
         h1 {
             font-size: 11.5vw;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .header {
+        .aboutMeList {
+            > * {
+                font-size: 0.9rem;
+            }
         }
     }
 }

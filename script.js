@@ -6,6 +6,9 @@ const navBarContainer = document.querySelector('.navBarContainer');
 const mobileNav = document.querySelector('.mobileNav');
 const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
 const menuBar = document.querySelectorAll('.menuBar');
+const skills = document.querySelectorAll('.devIconContainer');
+const myForm = document.querySelector('.myForm');
+const formStatus = document.querySelector('.formStatus');
 
 // A method to display the mobile menu
 app.displayMobileMenu = () => {
@@ -29,6 +32,14 @@ app.displayMobileMenu = () => {
     })
 }
 
+app.pressMobileMenu = () => {
+    hamburgerMenu.addEventListener('keydown', function(e) {
+        if (e.keyCode ===  13) {
+            app.menuToggle();
+        } 
+    })
+}
+
 // A method to close  the mobile menu once a link on the mobile menu has been clicked
 app.closeMobileMenu = () => {
     mobileNavLinks.forEach((link) => {
@@ -40,8 +51,6 @@ app.closeMobileMenu = () => {
 
 // a method to toggle classes related to mobile menu display
 app.menuToggle = () => {
-    navBar.classList.toggle('extendMenuDrop');
-    navBarContainer.classList.toggle('extendMenuBorder');
     mobileNav.classList.toggle('extendMenuDisplay');
     menuBar[0].classList.toggle('bar1');
     menuBar[1].classList.toggle('bar2');
@@ -50,8 +59,6 @@ app.menuToggle = () => {
 
 // a method to remove classes related to mobile menu display
 app.menuRemove = () => {
-    navBar.classList.remove('extendMenuDrop');
-    navBarContainer.classList.remove('extendMenuBorder');
     mobileNav.classList.remove('extendMenuDisplay');
     menuBar[0].classList.remove('bar1');
     menuBar[1].classList.remove('bar2');
@@ -85,13 +92,48 @@ app.fadeIn = () => {
             observer.observe(element);
         })
     }
+}
 
+app.handleSubmit = async (e) => {
+    e.preventDefault();
+    let data = new FormData(e.target);
+    fetch(e.target.action, {
+        method: myForm.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            formStatus.innerHTML = 'Thanks for your message!';
+            myForm.reset();
+            setTimeout(() => {
+                formStatus.innerHTML = '';
+            }, 5000)
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    formStatus.innerHTML = data['errors'].map(error => error['message']).join(", ");
+                } else {
+                    formStatus.innerHTML = 'Oops! There was a problem submitting your message.';
+                }
+            })
+        }
+    }).catch(error => {
+        formStatus.innerHTML = 'Oops! There was a problem submitting your message.';
+    });
+}
+
+app.handleFormSubmit = () => {
+    myForm.addEventListener('submit', app.handleSubmit);
 }
 
 app.init = () => {
     app.displayMobileMenu();
+    app.pressMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
+    app.handleFormSubmit();
 }
 
 app.init();
