@@ -7,7 +7,8 @@ const mobileNav = document.querySelector('.mobileNav');
 const mobileNavLinks = document.querySelectorAll('.mobileNavLinks');
 const menuBar = document.querySelectorAll('.menuBar');
 const skills = document.querySelectorAll('.devIconContainer');
-const test = document.querySelector('.test');
+const myForm = document.querySelector('.myForm');
+const formStatus = document.querySelector('.formStatus');
 
 // A method to display the mobile menu
 app.displayMobileMenu = () => {
@@ -93,11 +94,46 @@ app.fadeIn = () => {
     }
 }
 
+app.handleSubmit = async (e) => {
+    e.preventDefault();
+    let data = new FormData(e.target);
+    fetch(e.target.action, {
+        method: myForm.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            formStatus.innerHTML = 'Thanks for your message!';
+            myForm.reset();
+            setTimeout(() => {
+                formStatus.innerHTML = '';
+            }, 5000)
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    formStatus.innerHTML = data['errors'].map(error => error['message']).join(", ");
+                } else {
+                    formStatus.innerHTML = 'Oops! There was a problem submitting your message.';
+                }
+            })
+        }
+    }).catch(error => {
+        formStatus.innerHTML = 'Oops! There was a problem submitting your message.';
+    });
+}
+
+app.handleFormSubmit = () => {
+    myForm.addEventListener('submit', app.handleSubmit);
+}
+
 app.init = () => {
     app.displayMobileMenu();
     app.pressMobileMenu();
     app.closeMobileMenu();
     app.fadeIn();
+    app.handleFormSubmit();
 }
 
 app.init();
