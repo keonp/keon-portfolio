@@ -503,8 +503,8 @@ section {
   color: #FFFFFF;
   width: 400px;
   text-align: center;
-  -webkit-animation: slide 6s infinite;
-          animation: slide 6s infinite;
+  -webkit-animation: slide 7s infinite;
+          animation: slide 7s infinite;
 }
 
 @media (max-width: 645px) {
