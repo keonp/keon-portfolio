@@ -15,40 +15,44 @@
 }
 
 @keyframes slide {
-    0%{
-        transform: translateX(-3.9%); // FE
-    }
-    
-    10% {
-        transform: translateX(0.1%); // wait FE
+    0% {
+        transform: translateX(100.1%);
     }
 
+    10% {
+        transform: translateX(-3.9%); 
+    }
+    
     25% {
-        transform: translateX(-103.9%); // AJ
+        transform: translateX(0.1%); 
     }
 
     35% {
-        transform: translateX(-99.9%); // wait AJ
+        transform: translateX(-103.9%);
     }
-    
+
     50% {
-        transform: translateX(-203.9%); // PB
-    }
-
-    60% {
-        transform: translateX(-199.9%); // wait PB
+        transform: translateX(-99.9%);
     }
     
-    75% {
-        transform: translateX(-303.9%); // TECH
+    60% {
+        transform: translateX(-203.9%);
     }
 
+    75% {
+        transform: translateX(-199.9%);
+    }
+    
     85% {
-        transform: translateX(-299.9%); // wait TECH
+        transform: translateX(-303.9%);
+    }
+
+    98% {
+        transform: translateX(-299.9%);
     }
 
     100% {
-        transform: translateX(-403.9%); // FE
+        transform: translateX(-353.9%);
     } 
 }
 
