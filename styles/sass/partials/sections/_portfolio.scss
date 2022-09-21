@@ -51,7 +51,9 @@
         }
     }
 
-    .project1Container {
+    .project1Container,
+    .project2Container,
+    .project3Container {
         .projectIcon {
             transform: translateY(2px);
         }

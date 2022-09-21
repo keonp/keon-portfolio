@@ -1899,11 +1899,15 @@ section {
   color: #161616;
   background-color: #2ba5e2;
 }
-.portfolio .project1Container .projectIcon {
+.portfolio .project1Container .projectIcon,
+.portfolio .project2Container .projectIcon,
+.portfolio .project3Container .projectIcon {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
 }
-.portfolio .project1Container .projectSkills > * {
+.portfolio .project1Container .projectSkills > *,
+.portfolio .project2Container .projectSkills > *,
+.portfolio .project3Container .projectSkills > * {
   border: 3px solid #161616;
   color: #e2c42b;
   background-color: #161616;
