@@ -1894,33 +1894,37 @@ section {
   border-radius: 10px;
   margin: 5px 0;
 }
-.portfolio .project0Container .projectSkills > * {
+.portfolio .projectSimpsonsContainer .projectIcon,
+.portfolio .projectCYOAContainer .projectIcon,
+.portfolio .projectPSDContainer .projectIcon,
+.portfolio .projectSudokuContainer .projectIcon {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+.portfolio .projectBackronymContainer .projectSkills > * {
   border: 3px solid #161616;
   color: #161616;
   background-color: #2ba5e2;
 }
-.portfolio .project1Container .projectIcon,
-.portfolio .project2Container .projectIcon,
-.portfolio .project3Container .projectIcon {
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
-}
-.portfolio .project1Container .projectSkills > *,
-.portfolio .project2Container .projectSkills > *,
-.portfolio .project3Container .projectSkills > * {
+.portfolio .projectSimpsonsContainer .projectSkills > * {
   border: 3px solid #161616;
   color: #e2c42b;
   background-color: #161616;
 }
-.portfolio .project2Container .projectSkills > * {
+.portfolio .projectCYOAContainer .projectSkills > * {
   border: 3px solid #e2c42b;
   color: #161616;
   background-color: #f2f2f2;
 }
-.portfolio .project3Container .projectSkills > * {
+.portfolio .projectPSDContainer .projectSkills > * {
   border: 3px solid #161616;
   color: #FFFFFF;
   background-color: #345231;
+}
+.portfolio .projectSudokuContainer .projectSkills > * {
+  border: 3px solid #161616;
+  color: #161616;
+  background-color: #ffdab9;
 }
 .portfolio .projectIcon {
   display: inline;

@@ -43,7 +43,16 @@
         }
     }
 
-    .project0Container {
+    .projectSimpsonsContainer,
+    .projectCYOAContainer,
+    .projectPSDContainer,
+    .projectSudokuContainer {
+        .projectIcon {
+            transform: translateY(2px);
+        }
+    }
+
+    .projectBackronymContainer {
         .projectSkills {
             > * {
                 @include projectSkillsStyles($black, $black, $ocean);
@@ -51,21 +60,15 @@
         }
     }
 
-    .project1Container,
-    .project2Container,
-    .project3Container {
-        .projectIcon {
-            transform: translateY(2px);
-        }
-
+    .projectSimpsonsContainer {
         .projectSkills {
             > * {
                 @include projectSkillsStyles($black, $gold, $black);
             }
         }
     }
-    
-    .project2Container {
+
+    .projectCYOAContainer {
         .projectSkills {
             > * {
                 @include projectSkillsStyles($gold, $black, $offWhite);
@@ -73,11 +76,17 @@
         }
     }
 
-    .project3Container {
+    .projectPSDContainer {
         .projectSkills {
             > * {
                 @include projectSkillsStyles($black, $white, $green);
             }
+        }
+    }
+
+    .projectSudokuContainer{
+        .projectSkills  > * {
+            @include projectSkillsStyles($black, $black, $peach);
         }
     }
 
