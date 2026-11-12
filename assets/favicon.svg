@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #7b2f33; }
+    .k { fill: #fbfaf8; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #e8a8a3; }
+      .k { fill: #161414; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <text class="k" x="32" y="47" text-anchor="middle" font-family="Literata, Georgia, 'Times New Roman', serif" font-weight="500" font-size="44">K</text>
+</svg>

@@ -2,388 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keon</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Keon Pierre: finance, controls and software</title>
+    <meta name="description" content="Keon Pierre: finance, controls and software">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 
-    <!-- Title bar icon -->
-    <link rel="icon" href="./assets/laptop-code-solid.svg" type="image/x-icon">
+    <!-- Set theme before first paint: saved choice, else OS preference -->
+    <script>
+        (function () {
+            var theme;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (theme !== 'light' && theme !== 'dark') {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.dataset.theme = theme;
+        })();
+    </script>
 
-    <!-- Dev Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
-          
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/ledger.css">
 </head>
-<body id="home">
+<body>
+    <button type="button" class="themeToggle" aria-label="Switch to dark mode">
+        <!-- Lucide "moon" (shown in light mode) -->
+        <svg class="iconMoon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <!-- Lucide "sun" (shown in dark mode) -->
+        <svg class="iconSun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
 
-    <!-- Menu/Nav Bar -->
-    <nav class="navBar">
-        <div class="wrapper">
-            
-            <div class="navBarContainer">
-                <div class="logo">
-                    <a href="#home">Keon</a>
-                </div>
-        
-                <ul class="mainMenu">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="hamburgerMenu" tabindex="0">
-                    <span class="menuBar"></span>
-                    <span class="menuBar midBar"></span>
-                    <span class="menuBar"></span>
-                </div>
-            </div>
-            
-            <!-- Mobile nav bar -->
-            <nav class="mobileNav">
-                <ul class="mobileMenu">
-                    <li>
-                        <a href="#home" class="mobileNavLinks">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="mobileNavLinks">About</a>
-                    </li>
-                    <li>
-                        <a href="#skills" class="mobileNavLinks">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="mobileNavLinks">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="mobileNavLinks">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="wrapper">
+    <div class="page">
+        <header class="siteHeader">
             <h1>Keon Pierre</h1>
-            
-            <div class="subtextContainer">    
-                <ul class="aboutMeList">
-                    <li>front-end developer</li>
-                    <li>amateur jiu-jitsu practioner</li>
-                    <li>problem solver</li>
-                    <li>technology enthusiast</li>
-                </ul>
+            <p class="tagline">Finance, controls and software.</p>
+            <div class="headerMeta">
+                <span>Peterborough, Ontario. Open to remote.</span>
+                <nav class="contactNav" aria-label="Contact">
+                    <a href="mailto:keonlmp@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/keonpierre" target="_blank" rel="noopener">LinkedIn</a>                </nav>
             </div>
+        </header>
 
-            <a href="#contact" class="button contactMe">Contact Me</a>
-        </div>
-    </header>
+        <main>
+            <p class="intro">I spent six years as a treasury accountant, reconciling client fund accounts and moving millions of dollars in payments every week. In 2021 I started learning to code through Harvard's CS50, then left treasury to commit to it fully: a full-time bootcamp in 2022 and a developer role by that November. Since then I have owned billing and access-controlled internal tooling at an enterprise AI company. I'm drawn to the places where money, permissions and systems meet, and to making sure they are right.</p>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About section -->
-        <section class="about" id="about">
-            <div class="wrapper">
+            <section class="experience" aria-labelledby="exp">
+                <h2 id="exp">Experience</h2>
 
-                <div class="profileImgContainer fade">
-                    <div class="profileImg">
-                        <img src="./assets/profile-image.jpg" alt="An image of Keon Pierre">
+                <article class="role">
+                    <div class="roleHead">
+                        <h3>Software Developer<span class="company">, Zetane Systems</span></h3>
+                        <p class="dates">November 2022 to present · Remote</p>
                     </div>
-                </div>
+                    <p class="scope">Forge Cloud, an AI agent and chat platform sold to consumers and businesses in the US and Canada, in English and French. Promoted from Junior Front End Developer, July 2026.</p>
 
-                <div class="profileBioContainer fade">
-                    <div class="headerContainer">
-                        <h2>About Me</h2>
-                    </div>
-
-                    <p>I am a front-end web developer based out of the Greater Toronto Area with a background in finance and experience with working at a startup company. I have always been fascinated with emerging technologies, expanding my skill set, and challenging myself.</p>
-                    
-                    <p>Web development allows me to marry my passions and experiences together in order to create an intuitive, user-friendly environment. My hope is that my contributions lead to a better and more accessible future for all.</p>
-
-                    <p>When I'm not coding, you can find me getting ragdolled in the dojo, playing boardgames, or on a run.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills fade" id="skills">
-            <div class="wrapper">
-                <h2>Skills<div class="underline"></div></h2>
-                <div class="skillsWrapper fade">
-                    <ul class="skillsIconGallery">
-                        <li class="devIconContainer">
-                            <span class="sr-only">HTML icon</span>
-                            <i class="devicon-html5-plain" aria-hidden="true"></i>
-                            <p class="skillName">HTML</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">CSS icon</span>
-                            <i class="devicon-css3-plain" aria-hidden="true"></i>
-                            <p class="skillName">CSS</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">JavaScript icon</span>
-                            <i class="devicon-javascript-plain" aria-hidden="true"></i>
-                            <p class="skillName">JavaScript</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">React icon</span>
-                            <i class="devicon-react-original" aria-hidden="true"></i>
-                            <p class="skillName">React</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">Firebase icon</span>
-                            <i class="devicon-firebase-plain" aria-hidden="true"></i>
-                            <p class="skillName">Firebase</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">jQuery icon</span>
-                            <i class="devicon-jquery-plain" aria-hidden="true"></i>
-                            <p class="skillName">jQuery</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">Git icon</span>
-                            <i class="devicon-git-plain" aria-hidden="true"></i>
-                            <p class="skillName">Git</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">GitHub icon</span>
-                            <i class="devicon-github-original" aria-hidden="true"></i>
-                            <p class="skillName">GitHub</p>
-                        </li>
-                        <li class="devIconContainer">
-                            <span class="sr-only">SASS icon</span>
-                            <i class="devicon-sass-original" aria-hidden="true"></i>
-                            <p class="skillName">SASS</p>
-                        </li>
-                        <li class="devIconContainer accessibility">
-                            <span class="sr-only">Accessibility icon</span>
-                            <span class="material-symbols-outlined" aria-hidden="true">accessibility_new</span>
-                            <p class="skillName">Accessibility</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section class="portfolio fade" id="portfolio">
-            <div class="wrapper">
-                <h2>Projects<div class="underline"></div></h2>
-                <ul class="portfolioGallery">
-
-                    <!-- PROJECT 1 -->
-                    <li class="portfolioContainer projectBackronymContainer fade">
-                        <div class="projectImgContainer">
-                            <img class="projectImg" src="./assets/mock-up-backronym-gen.png" alt="Backronym generator app mock up">
-                        </div>
-                        <div class="projectDescriptionContainer">
-                            <h3>Backnronym Generator✨</h3>
-                            <ul class="projectSkills">
-                                <li>React</li>
-                                <li>HTML</li>
-                                <li>SASS</li>
-                                <li>Firebase</li>
-                                <li>RESTful API</li>
-                            </ul>
-                            <p>A four person project that uses the Datamuse API and Firebase authentication to allow users to create backronyms, display them along with other user creations, save and like them, and manage account settings.</p>
-                            <div class="buttonContainer">
-                                <a href="https://backronymgen.netlify.app/login" target="_blank" class="button anchorButtons">Live</a>
-    
-                                <a href="https://github.com/CKRP-FM/backronym-gen" target="_blank" class="button anchorButtons">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- PROJECT 2 -->
-                    <li class="portfolioContainer projectSimpsonsContainer fade">
-                        <div class="projectImgContainer">
-                            <img class="projectImg" src="./assets/mock-up-simpsons.png" alt="Simpsons Quote Triva app mock up">
-                        </div>
-                        <div class="projectDescriptionContainer">
-                            <h3>Simpsons Trivia
-                                <img class="projectIcon"src="./assets/simpsons-donut.png" alt="Simpsons donut">
-                            </h3>
-                            <ul class="projectSkills">
-                                <li>JavaScript</li>
-                                <li>HTML</li>
-                                <li>SASS</li>
-                                <li>RESTful API</li>
-                            </ul>
-                            <p>A paired-programming project that allows the user to test their knowledge of Simpsons quotes, built using the Simpsons Quote API.</p>
-                            <div class="buttonContainer">
-                                <a href="https://simpsons-quotes-trivia.netlify.app/" target="_blank" class="button anchorButtons">Live</a>
-    
-                                <a href="https://github.com/paired-project/simpsons-quote-trivia" target="_blank" class="button anchorButtons">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- PROJECT 3 -->
-                    <li class="portfolioContainer projectCYOAContainer fade">
-                        <div class="projectImgContainer">
-                            <img class="projectImg" src="./assets/mock-up-CYOA.png" alt="Choose your own adventure app mock up">
-                        </div>
-                        <div class="projectDescriptionContainer">
-                            <h3>Choose Your Own Adventure
-                                <img class="projectIcon" src="./assets/crossed-swords.png" alt="crossed swords">
-                            </h3>
-                            <ul class="projectSkills">
-                                <li>React</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Firebase</li>
-                            </ul>
-                            <p>An individual project that uses React, custom hooks, and Firebase to create a vintage inspired, choose your own adventure game.</p>
-                            <div class="buttonContainer">
-                                <a href="https://cyoa-app-production.netlify.app/" target="_blank" class="button anchorButtons">Live</a>
-                                
-                                <a href="https://github.com/keonp/keon-pierre-project3/tree/production" target="_blank" class="button anchorButtons">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- PROJECT 4 -->
-                    <li class="portfolioContainer projectSudokuContainer fade">
-                        <div class="projectImgContainer">
-                            <img class="projectImg" src="./assets/mock-up-sudoku-solver.png" alt="Sudoku solver app mock up">
-                        </div>
-                        <div class="projectDescriptionContainer">
-                            <h3>Sudoku solver
-                                <img class="projectIcon" src="./assets/sudoku-board.png" alt="Sudoku board">
-                            </h3>
-                            <ul class="projectSkills">
-                                <li>React</li>
-                                <li>Typescript</li>
-                                <li>Tailwind</li>
-                            </ul>
-                            <p>An individual coding project that uses a recursive backtracking algorithm to solve incomplete sudoku puzzles.</p>
-                            <div class="buttonContainer">
-                                <a href="https://solvingsudoku.netlify.app/" target="_blank" class="button anchorButtons">Live</a>
-                                
-                                <a href="https://github.com/keonp/sudoku-solver-ts" target="_blank" class="button anchorButtons">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- PROJECT 5 -->
-                    <li class="portfolioContainer projectPSDContainer fade">
-                        <div class="projectImgContainer">
-                            <img class="projectImg" src="./assets/mock-up-psd-to-html.png" alt="Multi-page website mock up">
-                        </div>
-                        <div class="projectDescriptionContainer">
-                            <h3>Willow
-                                <img class="projectIcon" src="./assets/leaf.png" alt="A leaf">
-                            </h3>
-                            <ul class="projectSkills">
-                                <li>JavaScript</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                            </ul>
-                            <p>An individual coding project that converts a PSD into a multi-page, functional, responsive website.</p>
-                            <div class="buttonContainer">
-                                <a href="https://willow-psd-project.netlify.app/" target="_blank" class="button anchorButtons">Live</a>
-                                
-                                <a href="https://github.com/keonp/keon-pierre-project1/tree/main" target="_blank" class="button anchorButtons">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact fade" id="contact">
-            <div class="wrapper">
-
-                <h2>Contact Me<div class="underline"></div></h2>
-                <div class="contactGallery fade">
-                    <div class="location">
-                        <div class="iconContainer">
-                            <i class="fa-solid fa-house"></i>
-                        </div>
-                        <h4>Location</h4>
-                        <p>Toronto, ON, Canada</p>    
-                    </div>
-                    <div class="email">
-                        <div class="iconContainer">
-                            <i class="fa-regular fa-envelope"></i>
-                        </div>
-                        <h4>Email:</h4>
-                        <a href="mailto:keonlmp@gmail.com">keonlmp@gmail.com</a>
-                    </div>
-                    <div class="socialMedia">
-                        <div class="iconContainer">
-                            <i class="fa-brands fa-gg"></i>
-                        </div>
-                        <h4>Social Media:</h4>
-                        <ul>
-                            <li>
-                                <a href="https://www.linkedin.com/in/keonpierre" target="_blank">
-                                    <span class="sr-only">link to Keon's LinkedIn page</span>
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/keonp" target="_blank">
-                                    <span class="sr-only">link to Keon's GitHub page</span>
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </li>
+                    <div class="group">
+                        <h4>Billing and revenue</h4>
+                        <ul class="dashList">
+                            <li><span>Shipped regional pricing in USD, CAD and EUR, and multi-currency, tax-collecting onboarding for enterprise customers with a tax-inclusive first-invoice preview before an account is created.</span></li>
+                            <li><span>Replaced the free tier with a two-week Pro trial that converts to paid once a card is added, with 3-D Secure checkout.</span></li>
+                            <li><span>Launched self-serve compute credit purchases from 5,000 to 1,000,000 credits, with automatic tax and signed quotes that fix the amount and total.</span></li>
+                            <li><span>Migrated all server-side Stripe integration across two API versions in three environments, enabling yearly business plans with monthly usage billing.</span></li>
+                            <li><span>Rebuilt past-due billing so unrecoverable subscriptions are downgraded in place, ending duplicate subscriptions; verified end to end against Stripe test clocks.</span></li>
                         </ul>
                     </div>
-                </div>
-                
-                <form
-                    action="https://formspree.io/f/xrgdzdrd"
-                    method="POST"
-                    class="myForm fade"
-                >
-                    <fieldset>
-                        <div class="inputs">
 
-                            <label for="name" class="sr-only">Name</label>
-                            <input type="text" name="name" id="name" class="inputField" placeholder="Full name" required>
+                    <div class="group">
+                        <h4>Business accounts and access</h4>
+                        <ul class="dashList">
+                            <li><span>Built one-step business account creation (identity, billing account and paid subscription) that rolls back fully if any step fails and never charges twice.</span></li>
+                            <li><span>Implemented Owner, Admin and Member roles enforced on the server, with billing actions limited to billing roles.</span></li>
+                            <li><span>Built member deprovisioning that ends a removed member's sessions immediately and stops their scheduled automations.</span></li>
+                            <li><span>Enforced Canadian data residency across every invitation and onboarding path, so Canadian accounts stay on the Canadian deployment.</span></li>
+                        </ul>
+                    </div>
 
+                    <div class="group">
+                        <h4>Internal tools and controls</h4>
+                        <ul class="dashList">
+                            <li><span>Built the internal admin tool for the enterprise customer lifecycle (25 endpoints), with every change written to an audit log, so staff no longer edit identity, billing or database records by hand.</span></li>
+                            <li><span>Built a read-only, audited production data explorer with per-region permissions, removing the need for direct production database access.</span></li>
+                            <li><span>Moved the admin panel behind company identity groups that developers cannot grant themselves, with every admin action and customer-data read audited (40 new security tests).</span></li>
+                            <li><span>Since mid-2026, every change I ship includes an ISO 27001 secure-development self-review.</span></li>
+                        </ul>
+                    </div>
+                </article>
 
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" class="inputField" placeholder="Email" required>
-                        </div>
-                        
-                        <label for="message" class="sr-only">Message</label>
-                        <textarea id="message" name="message" class="inputField" cols="30" rows="10" placeholder="Message" required></textarea>
+                <article class="role">
+                    <div class="roleHead">
+                        <h3>Treasury Accountant<span class="company">, 360insights</span></h3>
+                        <p class="dates">April 2016 to May 2022 · Whitby, ON</p>
+                    </div>
+                    <p class="scope">Treasury operations for a channel incentives platform paying consumers and sales associates in Canada and the US. Promoted from Accounting Associate, July 2019.</p>
 
-                        <button type="submit" class="button submitButton">Send Message</button>
-                        <p class="formStatus"></p>
-                    </fieldset>
-                </form>
-            </div>
-        </section>
-    </main>
+                    <div class="group">
+                        <ul class="dashList">
+                            <li><span>Processed tens of thousands of weekly payments to sales associates and consumers, about $3M a week with peaks of $7.5M.</span></li>
+                            <li><span>Reconciled operating and client fund bank accounts monthly in NetSuite for Canadian and US subsidiaries and acquired companies, within a three-business-day close.</span></li>
+                            <li><span>Integrated acquired companies' bank accounts into treasury processes.</span></li>
+                            <li><span>Secured client fund increases of up to $150,000 to keep consumer payments on time.</span></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="wrapper">
-            <p>Keon Pierre &copy; 2022</p>
-        </div>
-    </footer>
-    
-    <script src="https://kit.fontawesome.com/31f4a15268.js" crossorigin="anonymous"></script>
+            <section class="education" aria-labelledby="edu">
+                <h2 id="edu">Education</h2>
+                <ul class="dashList">
+                    <li><span>BCom (Honours), Finance major, Accounting minor, Ontario Tech University, 2016</span></li>
+                    <li><span>Immersive Web Development Bootcamp, Juno College of Technology, 2022</span></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="siteFooter">
+            <p>Say hello: <a href="mailto:keonlmp@gmail.com">keonlmp@gmail.com</a></p>
+        </footer>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
