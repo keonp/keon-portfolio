@@ -41,10 +41,7 @@
                 <span>Peterborough, Ontario. Open to remote.</span>
                 <nav class="contactNav" aria-label="Contact">
                     <a href="mailto:keonlmp@gmail.com">Email</a>
-                    <a href="https://www.linkedin.com/in/keonpierre" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="./assets/Keon-Pierre-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-                    <a href="https://github.com/keonp" target="_blank" rel="noopener">GitHub</a>
-                </nav>
+                    <a href="https://www.linkedin.com/in/keonpierre" target="_blank" rel="noopener">LinkedIn</a>                </nav>
             </div>
         </header>
 
@@ -59,16 +56,16 @@
                         <h3>Software Developer<span class="company">, Zetane Systems</span></h3>
                         <p class="dates">November 2022 to present · Remote</p>
                     </div>
-                    <p class="scope">Forge Cloud, an AI agent and chat platform sold to consumers and businesses in the US and Canada, in English and French. Promoted from Junior Front End Developer, July 2026. 98 merged changes and 24 database migrations.</p>
+                    <p class="scope">Forge Cloud, an AI agent and chat platform sold to consumers and businesses in the US and Canada, in English and French. Promoted from Junior Front End Developer, July 2026.</p>
 
                     <div class="group">
                         <h4>Billing and revenue</h4>
                         <ul class="dashList">
-                            <li><span>Shipped regional pricing in USD, CAD and EUR, and replaced the free tier with a two-week Pro trial that converts to paid once a card is added, with 3-D Secure checkout.</span></li>
+                            <li><span>Shipped regional pricing in USD, CAD and EUR, and multi-currency, tax-collecting onboarding for enterprise customers with a tax-inclusive first-invoice preview before an account is created.</span></li>
+                            <li><span>Replaced the free tier with a two-week Pro trial that converts to paid once a card is added, with 3-D Secure checkout.</span></li>
                             <li><span>Launched self-serve compute credit purchases from 5,000 to 1,000,000 credits, with automatic tax and signed quotes that fix the amount and total.</span></li>
-                            <li><span>Migrated every server-side payment call across two breaking API versions in three environments, enabling yearly business plans with monthly usage billing, then removed 109 redundant overrides.</span></li>
-                            <li><span>Rebuilt past-due billing so unrecoverable subscriptions are downgraded in place, ending duplicate subscriptions; verified end to end against the payment provider's test clocks.</span></li>
-                            <li><span>Added multi-currency, tax-collecting onboarding for enterprise customers, with a tax-inclusive first-invoice preview before an account is created.</span></li>
+                            <li><span>Migrated all server-side Stripe integration across two API versions in three environments, enabling yearly business plans with monthly usage billing.</span></li>
+                            <li><span>Rebuilt past-due billing so unrecoverable subscriptions are downgraded in place, ending duplicate subscriptions; verified end to end against Stripe test clocks.</span></li>
                         </ul>
                     </div>
 
@@ -77,7 +74,7 @@
                         <ul class="dashList">
                             <li><span>Built one-step business account creation (identity, billing account and paid subscription) that rolls back fully if any step fails and never charges twice.</span></li>
                             <li><span>Implemented Owner, Admin and Member roles enforced on the server, with billing actions limited to billing roles.</span></li>
-                            <li><span>Built offboarding that logs a removed member out at once and stops their scheduled automations.</span></li>
+                            <li><span>Built member deprovisioning that ends a removed member's sessions immediately and stops their scheduled automations.</span></li>
                             <li><span>Enforced Canadian data residency across every invitation and onboarding path, so Canadian accounts stay on the Canadian deployment.</span></li>
                         </ul>
                     </div>
@@ -86,7 +83,7 @@
                         <h4>Internal tools and controls</h4>
                         <ul class="dashList">
                             <li><span>Built the internal admin tool for the enterprise customer lifecycle (25 endpoints), with every change written to an audit log, so staff no longer edit identity, billing or database records by hand.</span></li>
-                            <li><span>Built a read-only production data explorer: read-only queries enforced by parsing and by a read-only transaction, 10-second timeouts, row limits and per-region permissions, with no production credentials.</span></li>
+                            <li><span>Built a read-only, audited production data explorer with per-region permissions, removing the need for direct production database access.</span></li>
                             <li><span>Moved the admin panel behind company identity groups that developers cannot grant themselves, with every admin action and customer-data read audited (40 new security tests).</span></li>
                             <li><span>Since mid-2026, every change I ship includes an ISO 27001 secure-development self-review.</span></li>
                         </ul>
@@ -103,7 +100,7 @@
                     <div class="group">
                         <ul class="dashList">
                             <li><span>Processed tens of thousands of weekly payments to sales associates and consumers, about $3M a week with peaks of $7.5M.</span></li>
-                            <li><span>Reconciled operating and client fund bank accounts monthly for Canadian and US subsidiaries and acquired companies, within a three-business-day close.</span></li>
+                            <li><span>Reconciled operating and client fund bank accounts monthly in NetSuite for Canadian and US subsidiaries and acquired companies, within a three-business-day close.</span></li>
                             <li><span>Integrated acquired companies' bank accounts into treasury processes.</span></li>
                             <li><span>Secured client fund increases of up to $150,000 to keep consumer payments on time.</span></li>
                         </ul>
